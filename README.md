@@ -6,7 +6,7 @@
 ![AI](https://img.shields.io/badge/AI-Claude%20(Anthropic)-blueviolet)
 ![Platform](https://img.shields.io/badge/Platform-claude.ai%20%7C%20ChatGPT%20%7C%20Gemini-orange)
 ![Language](https://img.shields.io/badge/Language-繁體中文-red)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 ![Status](https://img.shields.io/badge/status-active-success)
 
 > 一套六步驟的台股個股初步分析框架，核心原則是「**現金流優先、基本面在後**」——先用現金流量表做「盲測」，避免公司背景、產業地位、法說會樂觀話術等資訊，讓分析帶著先入為主的印象。
@@ -144,7 +144,7 @@
 
 ## 📜 授權
 
-本專案以 [MIT License](LICENSE) 開源，歡迎自由使用、修改與分享。
+本專案以 [CC BY-NC 4.0（姓名標示－非商業性）](LICENSE) 授權，歡迎自由使用、修改與分享，但需標明出處且不得用於商業用途。
 
 ## ⚠️ 免責聲明
 

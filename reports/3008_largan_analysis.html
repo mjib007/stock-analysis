@@ -84,6 +84,8 @@ td.l{text-align:left;white-space:normal;font-family:"Noto Sans TC",sans-serif;fo
 tr.qrow{background:#F6F4EE}
 tr.hlrow td,tr.hlrow th{background:#E9EDEC;font-weight:600}
 tr.hlrow th.rh{background:#E9EDEC}
+tr.warnrow td,tr.warnrow th{background:#FBEDEA}
+tr.warnrow th.rh{background:#FBEDEA}
 .chartbox{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 10px 4px;margin:14px 0 8px}
 svg.bars{width:100%;height:auto;display:block}
 .axis{stroke:#B9C2BB;stroke-width:1}
@@ -132,12 +134,12 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">3008</span>大立光電</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。使用者提供的截圖雖含年度股價、漲跌幅與稅後 EPS 欄位，<b>本步驟一律不予採用</b>。</p>
   <div class="meta">
-    <span>報告版本 v1.0</span><span>生成時間 2026-08-18 14:27</span>
-    <span>目前進度 第 1 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
+    <span>報告版本 v2.0</span><span>生成時間 2026-08-18 14:38</span>
+    <span>目前進度 第 2 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
   </div>
 </header>
 
-<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad locked" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad locked" data-t="step3"><span class="k">03</span>法說會</button><button class="pad locked" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button></nav>
+<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad locked" data-t="step3"><span class="k">03</span>法說會</button><button class="pad locked" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button></nav>
 
 <section id="step1">
 <div class="steptag">第 1 步／共 6 步</div><h2>現金流量表六大規則分析（盲測）</h2>
@@ -475,13 +477,66 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 <b>推算數字標註：</b>|B|÷A 比重、股東回饋占 C 比重、固定資產占 B 比重、股利佔 A 比重、各項年增率與倍數，皆為 Claude 依上述截圖數字計算，非截圖直接顯示的欄位。<br>
 <b>盲測聲明：</b>截圖一含有年度股價、漲跌幅、稅後 EPS、財報評分等欄位，本步驟<b>全部未予採用</b>，所有判斷僅基於 A／B／C／D／E 五欄。</div>
 </section>
-<section id="step2"><div class="steptag">第 2 步／共 6 步</div><h2>基本資訊查詢</h2><div class="pending">待第 1 步關卡通過後執行：股價、EPS、本益比、殖利率、近期營收、法說會連結。</div></section>
+<section id="step2">
+<div class="steptag">第 2 步／共 6 步</div><h2>基本資訊查詢</h2>
+
+<div class="key"><div class="kt">本步驟重點</div>
+<p><b>第 1 步規則五的疑問已經解開，而且是「結構因素」而非「品質疑慮」。</b>把對照基準從 D（稅前淨利）換成<b>營業利益</b>後，2022–2025 年<b>四年全部 A &gt; 營業利益</b>。D 之所以長期高於 A，是因為每年有 <b>23～82 億元的業外損益</b>灌進稅前淨利，而這些錢不走營業活動。</p>
+<p>代價是<b>獲利品質高度受匯率擺布</b>：2025 Q2 營業利益還有 48.79 億元，稅後淨利卻只剩 <span class="negv-t">10.56 億元</span>、EPS <span class="negv-t">7.73 元</span>。<b>看大立光的單季 EPS，等於同時在看台幣匯率。</b></p>
+<p>目前股價 <b>5,290 元</b>（08/18 收盤），近四季 EPS <b>185.75 元</b>，本益比約 <b>28.5 倍</b>——<b>股價今年以來已經翻倍</b>（26Q1 季均價 2,382 元），估值不再便宜。</p></div>
+
+<h3><span class="rn">2.1</span>股價與估值快照</h3>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">項目</th><th>數值</th><th>說明</th><th>來源</th></tr></thead><tbody><tr><th class="rh">收盤價</th><td class="n"><b>5,290 元</b></td><td class="l">2026/08/18 13:30 收盤，較前一日 +220 元（+4.34%）</td><td class="l muted">Yahoo股市</td></tr><tr><th class="rh">近四季 EPS</th><td class="n"><b>185.75 元</b></td><td class="l">推算：25Q3 53.05＋25Q4 50.35＋26Q1 46.63＋26Q2 35.72</td><td class="l muted">Yahoo／推算</td></tr><tr><th class="rh">本益比</th><td class="n"><b>28.5 倍</b></td><td class="l">推算：5,290 ÷ 185.75。Yahoo 頁面同時標示 26.97 倍、鉅亨盤中快照 27.22 倍（股價 5,055）</td><td class="l muted">推算／並陳</td></tr><tr><th class="rh">同業平均本益比</th><td class="n"><b>102.52 倍</b></td><td class="l">光電類股平均，Yahoo 標示（同一時點）</td><td class="l muted">Yahoo股市</td></tr><tr><th class="rh">每股淨值</th><td class="n"><b>1,240.07 元</b></td><td class="l">鉅亨網個股總覽欄位（盤中快照）</td><td class="l muted">鉅亨網</td></tr><tr><th class="rh">股價淨值比</th><td class="n"><b>4.27 倍</b></td><td class="l">推算：5,290 ÷ 1,240.07</td><td class="l muted">推算</td></tr><tr><th class="rh">市值</th><td class="n"><b>約 6,930 億元</b></td><td class="l">推算：5,290 × 1.31 億股</td><td class="l muted">推算</td></tr><tr><th class="rh">近 12 個月現金股利</th><td class="n"><b>93.50 元</b></td><td class="l">25H2 的 52 元（26/03/19 除息）＋ 26H1 的 41.5 元（26/08/13 除息）</td><td class="l muted">Yahoo／新聞</td></tr><tr><th class="rh">現金殖利率</th><td class="n"><b>1.77%</b></td><td class="l">推算：93.50 ÷ 5,290。近 5 年平均殖利率 3.69%</td><td class="l muted">推算／Yahoo</td></tr><tr><th class="rh">52 週高／低</th><td class="n"><b>5,360 ／ 2,020 元</b></td><td class="l">鉅亨網盤中快照，非今日收盤時點</td><td class="l muted">鉅亨網</td></tr></tbody></table></div><p class="cap">即時報價類欄位為「查詢當下的單一數字」，不是頁面公布的區間。本表所有數字均標註查詢時點；正式交易請以自己的看盤軟體為準。</p>
+<p><b>資料落差誠實揭露：</b>本次抓取 Yahoo 個股頁時，網頁快照曾回傳 <b>2026/08/07 收盤 4,385 元</b>與 <b>2026/06/18 收盤 5,195 元</b>兩個較早時點的版本，搜尋結果則顯示 <b>2026/08/18 13:30 收盤 5,290 元</b>。本報告採用最新的 08/18 數字，但要說明：這些是<b>同一欄位在不同時間點的快照</b>，不是頁面公布的區間。另外 Yahoo 頁面標示的本益比 26.97 倍與「5,290 ÷ 185.75 ＝ 28.5 倍」對不上，可能是該欄位的 EPS 基期尚未更新到 26Q2，<b>本報告不擇一當權威值，兩者並陳。</b></p>
+
+<h3><span class="rn">2.2</span>EPS 與獲利結構</h3>
+<div class="tw"><table class="grid"><thead><tr><th class="rh">年度／季別</th><th>單季 EPS（元）</th><th>單季稅後淨利（億元）</th><th>季均價（元）</th></tr></thead><tbody><tr><th class="rh">2026 Q2</th><td class="n">35.72</td><td class="n">46.69</td><td class="n muted">—</td></tr><tr><th class="rh">2026 Q1</th><td class="n">46.63</td><td class="n">61.23</td><td class="n muted">2,382.73</td></tr><tr><th class="rh">2025 Q4</th><td class="n">50.35</td><td class="n">68.02</td><td class="n muted">2,357.51</td></tr><tr><th class="rh">2025 Q3</th><td class="n">53.05</td><td class="n">71.59</td><td class="n muted">2,404.72</td></tr><tr class="warnrow"><th class="rh">2025 Q2</th><td class="n">7.73</td><td class="n">10.56</td><td class="n muted">2,437.24</td></tr><tr><th class="rh">2025 Q1</th><td class="n">48.28</td><td class="n">65.43</td><td class="n muted">2,654.09</td></tr><tr><th class="rh">2024 Q4</th><td class="n">65.01</td><td class="n">89.72</td><td class="n muted">2,540.25</td></tr><tr><th class="rh">2024 Q3</th><td class="n">49.67</td><td class="n">66.30</td><td class="n muted">2,571.14</td></tr><tr><th class="rh">2024 Q2</th><td class="n">33.70</td><td class="n">44.98</td><td class="n muted">2,425.38</td></tr><tr><th class="rh">2024 Q1</th><td class="n">45.79</td><td class="n">61.11</td><td class="n muted">2,519.46</td></tr></tbody></table></div><p class="cap">2025 Q2（紅底）EPS 僅 7.73 元、稅後淨利僅 10.56 億元，是近十季唯一的斷崖。原因不在本業——當季營業利益仍有 48.79 億元，落差來自業外（詳下節）。2026 Q2 稅後淨利年增約 3.5 倍，正是因為比較基期是這個異常低的季度。</p>
+<h4>關鍵驗證：第 1 步規則五的 A &lt; D 到底是什麼問題？</h4>
+<p class="lead">第 1 步留下的第一優先查證項目，答案在這張表。</p>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">年度</th><th>營業利益</th><th>D 稅前淨利</th><th>業外損益（推算）</th><th>A 營業現金流</th><th>A −營業利益</th><th>A &gt; 營業利益？</th></tr></thead><tbody><tr><th class="rh">2022</th><td class="n">203.8</td><td class="n">278</td><td class="n posv">+74.2</td><td class="n">442</td><td class="n posv">+238.2</td><td class="pass">通過</td></tr><tr><th class="rh">2023</th><td class="n">178.1</td><td class="n">221</td><td class="n posv">+42.9</td><td class="n">182</td><td class="n posv">+3.9</td><td class="pass">通過</td></tr><tr><th class="rh">2024</th><td class="n">240.3</td><td class="n">322</td><td class="n posv">+81.7</td><td class="n">316</td><td class="n posv">+75.7</td><td class="pass">通過</td></tr><tr><th class="rh">2025</th><td class="n">235.6</td><td class="n">259</td><td class="n posv">+23.4</td><td class="n">261</td><td class="n posv">+25.4</td><td class="pass">通過</td></tr></tbody></table></div><p class="cap">單位：億元。營業利益為 Yahoo 損益表四個單季加總（推算）；D 與 A 為使用者第 1 步提供的 Goodinfo 截圖。兩者來源不同，稅後淨利口徑略有差異（Yahoo 2025 四季加總 215.6 億 vs Goodinfo 213 億，差額約 2.6 億，推測為非控制權益），不影響此處的方向性結論。</p>
+<p><b>結論：規則五的低分是「D 的定義」造成的，不是收款出問題。</b>大立光每年有 23～82 億元的業外損益進入稅前淨利，主要是<b>利息收入與匯兌損益</b>——2026 Q1 法說會揭露該季<b>匯兌收益 3.9 億元、利息收入 10 億元</b>，光單季業外就近 14 億元。帳上 1,159 億元現金每年孳生的利息，會墊高 D 卻不會墊高 A，現金部位越大、缺口越明顯，這正好對應第 1 步觀察到的「缺口與現金規模同步擴大」。</p>
+<p><b>但這個解釋不是免死金牌，它換來另一個問題：</b>業外占比太高，獲利波動就不受公司控制。2025 Q2 台幣急升，單季 EPS 從 48.28 元掉到 <span class="negv-t">7.73 元</span>（本業營業利益只從 60.86 億微降到 48.79 億）。<b>用近四季 EPS 算出來的本益比，分母本身就含有匯率雜訊。</b></p>
+<div class="key warn"><div class="kt">第 1 步分數處理</div>
+<p>依盲測原則，<b>規則五的 29.4 分不回頭修改</b>——那是依當時可得資料做出的獨立判斷，且「A 長期低於 D」本身是客觀事實。本節只做<b>加註說明</b>：若把對照基準改為營業利益，2022–2025 年通過率為 <b>4/4（100%）</b>，本業現金轉換能力其實是好的。</p></div>
+
+<h3><span class="rn">2.3</span>股利政策與股本變動</h3>
+<p><b>已連續 30 年發放股利，合計 1,059.84 元</b>，近 5 年平均現金殖利率 3.69%。目前為<b>半年配</b>：2026 上半年配發 <b>41.5 元</b>（盈餘配發率 50.39%、發放總額 54.28 億元），<b>2026/08/13 除息並當日完成填息</b>，是改半年配後第 5 次一日填息。上半年配息優於去年同期的 28 元。</p>
+<p><b>股本變動檢查（每股數字可比性）：</b>使用者提供的 Goodinfo 截圖顯示平均股本由 2009–2021 年的 <b>13.4 億元</b>降至 2022–2025 年的 <b>13.3 億元</b>、26Q2 的 <b>13.1 億元</b>。<b>沒有股票分割、沒有減資退還股款、近年沒有現金增資</b>，股本的小幅下降與 2021 年 14.01 億元、2025 年 16.23 億元的庫藏股買回時點吻合（推論為買回後註銷）。因此<b>各期 EPS、每股淨值可直接比較，不需回溯調整</b>。</p>
+
+<h3><span class="rn">2.4</span>近期營收</h3>
+<div class="tw"><table class="grid"><thead><tr><th class="rh">期間</th><th>營收（億元）</th><th>月增／季增</th><th>年增</th></tr></thead><tbody><tr><th class="rh">2026 年 7 月</th><td class="n"><b>48.77</b></td><td class="n">+31.38%</td><td class="n">−10.66%</td></tr><tr><th class="rh">2026 年 1–7 月累計</th><td class="n"><b>340.86</b></td><td class="n">—</td><td class="n">+7.49%</td></tr><tr><th class="rh">2026 年上半年</th><td class="n"><b>292.09</b></td><td class="n">—</td><td class="n">—</td></tr><tr><th class="rh">2026 Q1</th><td class="n"><b>155.44</b></td><td class="n">−9.7%（季）</td><td class="n">+7%</td></tr></tbody></table></div><p class="cap">7 月年減 10.66% 但月增 31.38%，公司說明為 6 月客戶新舊機種交替後的動能回補。完整 8–12 期月營收趨勢圖留待第 4 步。</p>
+<p>7 月鏡頭出貨組合以 <b>1,000 萬畫素占 60–70%</b> 最高，2,000 萬畫素以上占 10–20%，800 萬畫素以下占 10% 以下。公司預期 <b>8 月出貨動能優於 7 月</b>，本季產能利用率將達滿載。</p>
+
+<h3><span class="rn">2.5</span>法說會與近期重大動向</h3>
+<ul>
+<li><b>2026/07/09（最近一場，Q2 法說會）：</b>公布 Q2 稅後純益 46.69 億元、EPS 35.72 元，上半年 EPS 82.35 元。市場焦點在 <b>CPO（共同封裝光學）</b>布局——執行長林恩平表示 <b>FA（光纖陣列）產品當月送樣認證</b>，<b>CPO 最快 2027 年中放量</b>。</li>
+<li><b>2026/04/16（Q1 法說會）：</b>揭露 Q1 匯兌收益 3.9 億、利息收入 10 億、折舊 20.7 億、<b>資本支出 23.9 億</b>；並指出 CPO 目前只做到 FAU 階段，<b>認證需 1–2 年才會進入量產</b>，坦言自己是「後進者」，但已將其列為<b>第二大業務</b>。</li>
+<li><b>2026/01/08（法說會）：</b>2026 年潛望式鏡頭規格不升級；薄型化鏡頭需求減弱；折疊機鏡頭預計 2026 年底出貨；CPO 當時仍在早期研發、尚未可量產。</li>
+<li><b>持續購地：</b>自 6 月底起在台中工業區連續購入三筆土地廠房，合計 <b>25.69 億元</b>，其中單筆 13.8 億元、3,065 坪。市場解讀與 CPO 新事業佈局有關。</li>
+</ul>
+<p class="cap">MOPS 官網的法說會簡報 PDF 受 robots.txt 限制無法自動讀取，上述內容<b>全部來自財經媒體的法說會報導整理</b>，非本報告直接解析官方簡報。</p>
+
+<div class="snap"><b>資料來源：</b><br>
+· 收盤價 5,290 元、+4.34%、本益比 26.97 倍（同業平均 102.52）：<a href="https://tw.stock.yahoo.com/quote/3008.TW">Yahoo股市 3008 走勢圖</a>（標示 2026/08/18 13:30 更新）。同一頁面在本次不同批次抓取中另回傳 08/07 收盤 4,385 元、06/18 收盤 5,195 元的舊快照，已於 2.1 節說明。<br>
+· 單季 EPS 與季均價（2024Q1–2026Q1）：<a href="https://tw.stock.yahoo.com/quote/3008.TW/eps">Yahoo股市 3008 每股盈餘</a>。<br>
+· 各季營業收入、營業利益、稅後淨利（2021Q2–2026Q1）：<a href="https://tw.stock.yahoo.com/quote/3008.TW/income-statement">Yahoo股市 3008 損益表</a>。<br>
+· 每股淨值 1,240.07、發行股 1.31 億、52 週高低 5,360／2,020、近四季 EPS 185.74：<a href="https://www.cnyes.com/twstock/3008">鉅亨網 3008 總覽</a>（盤中快照，非收盤時點）。<br>
+· 歷年股利、連續 30 年發放合計 1,059.84 元、近 5 年平均殖利率 3.69%、2025H2 配 52 元：<a href="https://tw.stock.yahoo.com/quote/3008.TW/dividend">Yahoo股市 3008 股利政策</a>。<br>
+· 26H1 配息 41.5 元、配發率 50.39%、發放 54.28 億元、8/13 除息、優於去年同期 28 元；7 月營收 48.77 億元（月增 31.38%、年減 10.66%）、1–7 月 340.86 億元（年增 7.49%）；上半年營收 292.09 億元、稅後純益 107.93 億元、EPS 82.35 元；台中購地合計 25.69 億元：<a href="https://news.cnyes.com/news/id/6560440">鉅亨網 2026/08/05 營收報導</a>、<a href="https://news.cnyes.com/news/id/6578782">鉅亨網 2026/08/16 焦點股報導</a>。<br>
+· Q2 稅後純益 46.69 億元、EPS 35.72 元、CPO 最快明年中放量、7 月優於 6 月／8 月優於 7 月：<a href="https://finance.ettoday.net/news/3198202">ETtoday 2026/07/09 法說會報導</a>。<br>
+· 上半年稅後淨利破百億、FA 產品當月送樣認證、最快 2027 年量產：<a href="https://udn.com/news/story/7240/9618271">聯合新聞網 2026/07/09 法說會報導</a>。<br>
+· Q1 匯兌收益 3.9 億、利息收入 10 億、折舊 20.7 億、資本支出 23.9 億、Q1 EPS 46.63 元：<a href="https://m.cnyes.com/news/id/6422325">鉅亨網 2026/04/16 法說會報導</a>、<a href="https://www.chinatimes.com/realtimenews/20260416003089-261502">中時 2026/04/16 法說會報導</a>。<br>
+· CPO 認證需 1–2 年、列為第二大業務、後進者說法：<a href="https://tw.stock.yahoo.com/news/%E5%A4%A7%E7%AB%8B%E5%85%89%E6%95%B2%E5%AE%9A4-16%E8%88%87%E5%8F%B0%E7%A9%8D%E9%9B%BB%E5%90%8C%E6%97%A5%E5%8F%AC%E9%96%8B%E6%B3%95%E8%AA%AA%E6%9C%83-%E6%9E%97%E6%81%A9%E5%B9%B3%E5%B0%87%E9%87%8B%E7%87%9F%E9%81%8B%E5%B1%95%E6%9C%9B-080235649.html">財訊快報／MoneyDJ（Yahoo 轉載）</a>。<br>
+· 2026/01/08 法說會的潛望式、薄型化、折疊、CPO、機器人等產品線說明：<a href="https://blog.fugle.tw/post/earnings-call-3008-2026-1-8">富果直送法說會備忘錄</a>（第三方整理，非官方簡報）。<br>
+· 7 月出貨畫素組合、8 月動能優於 7 月、產能滿載：<a href="https://money.udn.com/money/story/5612/9679562">經濟日報 2026/08 報導</a>、<a href="https://newtalk.tw/news/view/2026-08-05/1051542">Newtalk 2026/08/05 報導</a>。<br>
+<b>推算數字標註：</b>近四季 EPS 185.75、本益比 28.5 倍、市值 6,930 億、股價淨值比 4.27、殖利率 1.77%、各年營業利益加總、業外損益（＝D −營業利益）、A −營業利益差額——<b>皆為 Claude 依上述來源數字計算，非直接查得的公告欄位。</b></div>
+</section>
 <section id="step3"><div class="steptag">第 3 步／共 6 步</div><h2>法說會資料深入討論</h2><div class="pending">待第 2 步完成後，先概覽最近一次法說會重點，再由使用者選擇深入方向。</div></section>
 <section id="step4"><div class="steptag">第 4 步／共 6 步</div><h2>營收趨勢視覺化</h2><div class="pending">待執行：近 8–12 期月營收長條圖與 YoY 變化。</div></section>
 <section id="step5"><div class="steptag">第 5 步／共 6 步</div><h2>前瞻本益比／EPS 預估</h2><div class="pending">待執行：市場法人 EPS 預估、前瞻本益比、目標本益比法情境試算。</div></section>
 <section id="step6"><div class="steptag">第 6 步／共 6 步</div><h2>投資決策推理</h2><div class="pending">僅在使用者主動詢問「會不會投資／該不該續抱」時才執行，不會自動附加。</div></section>
 <footer>
-  3008 大立光電 · 個股初步分析 · 報告版本 v1.0 · 生成時間 2026-08-18 14:27<br>
+  3008 大立光電 · 個股初步分析 · 報告版本 v2.0 · 生成時間 2026-08-18 14:38<br>
   本報告為財務數據的結構化整理與推理，不構成投資建議。所有數字以官方財報公告為準。
 </footer>
 </div>

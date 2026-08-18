@@ -136,12 +136,12 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">3008</span>大立光電</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。使用者提供的截圖雖含年度股價、漲跌幅與稅後 EPS 欄位，<b>本步驟一律不予採用</b>。</p>
   <div class="meta">
-    <span>報告版本 v2.2</span><span>生成時間 2026-08-19 04:37</span>
+    <span>報告版本 v2.3</span><span>生成時間 2026-08-19 04:40</span>
     <span>目前進度 第 2 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
   </div>
 </header>
 
-<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad" data-t="step3"><span class="k">03</span>法說會</button><button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button></nav>
+<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad" data-t="step3"><span class="k">03</span>法說會</button><button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button></nav>
 
 <section id="step1">
 <div class="steptag">第 1 步／共 6 步</div><h2>現金流量表六大規則分析（盲測）</h2>
@@ -677,10 +677,55 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 <b>本節未使用推論數字</b>——長條圖與表格數字均為截圖原始數字之直接呈現，未涉及 Claude 自行估算的假設性推算。</div>
 
 </section>
-<section id="step5"><div class="steptag">第 5 步／共 6 步</div><h2>前瞻本益比／EPS 預估</h2><div class="pending">待執行：市場法人 EPS 預估、前瞻本益比、目標本益比法情境試算。</div></section>
+<section id="step5"><div class="steptag">第 5 步／共 6 步</div><h2>前瞻本益比／EPS 預估</h2>
+
+<div class="key warn"><div class="kt">本步驟重點</div>
+<p><b>股價已經跑到分析師目標價前面。</b>現價 5,290 元（08/18 收盤）已超過 FactSet 最新一次調查（約 3 週前，17 位分析師）給出的共識目標價 <b>5,220 元</b>，隱含前瞻本益比約 <b>27.8～27.9 倍</b>，高於近四季本益比的 28.5 倍（第 2 步查得，含匯率雜訊），也遠高於歷史平均。<b>用目前價位進場，等於是賭分析師會繼續上修，而不是賭他們現在的數字。</b></p></div>
+
+<h3><span class="rn">5.1</span>市場法人 EPS 預估（FactSet 調查）</h3>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">年度</th><th>中位數（元）</th><th>平均值（元）</th><th>最高值（元）</th><th>最低值（元）</th><th>估值區間寬度</th></tr></thead><tbody>
+<tr class="warnrow"><th class="rh">2026 年（N）</th><td class="n"><b>190.00</b></td><td class="n">189.39</td><td class="n posv">208.64</td><td class="n negv">175.24</td><td class="n">33.40 元</td></tr>
+<tr><th class="rh">2027 年（N+1）</th><td class="n">209.37</td><td class="n">209.01</td><td class="n posv">229.89</td><td class="n negv">182.48</td><td class="n">47.41 元</td></tr>
+<tr><th class="rh">2028 年（N+2）</th><td class="n">239.54</td><td class="n">234.84</td><td class="n posv">275.07</td><td class="n negv">182.90</td><td class="n">92.17 元</td></tr>
+</tbody></table></div>
+<p class="cap">FactSet 最新一次調查（約 2026/07/29，17 位分析師）。另有兩個較早時點的調查可供參照歷史修正方向：2026/06/09（19 位分析師）中位數 187.21 元、目標價 3,150 元；2026/07/14（分析師家數未標示）中位數下修至 187.55 元、目標價 5,150 元。<b>三次調查方向為「先上修、中間小幅下修、再上修」，且目標價從 3,150 元一路上調到 5,220 元，反映股價急漲後法人跟漲式上修目標，而非獲利預估本身有結構性跳升。</b></p>
+
+<h3><span class="rn">5.2</span>前瞻本益比（現在貴不貴）</h3>
+<div class="tw"><table class="grid"><thead><tr><th class="rh">計算基礎</th><th>股價</th><th>預估 EPS</th><th>前瞻本益比</th></tr></thead><tbody>
+<tr><th class="rh">現價 ÷ 2026E EPS（中位數）</th><td class="n">5,290</td><td class="n">190.00</td><td class="n negv-t"><b>27.8 倍</b></td></tr>
+<tr><th class="rh">現價 ÷ 2026E EPS（平均值）</th><td class="n">5,290</td><td class="n">189.39</td><td class="n negv-t"><b>27.9 倍</b></td></tr>
+<tr><th class="rh">現價 ÷ 2027E EPS（中位數）</th><td class="n">5,290</td><td class="n">209.37</td><td class="n">25.3 倍</td></tr>
+</tbody></table></div>
+<p class="cap">計算公式：現在股價 ÷ 預估EPS。用 2026 年預估（近期，較確定）算出的前瞻本益比 27.8～27.9 倍，比用 2027 年預估（較遠、較不確定）算出的 25.3 倍更高，是正常現象——時間拉遠，分母（EPS）預期成長，倍數自然下降，不代表用哪個數字比較「便宜」。</p>
+
+<h3><span class="rn">5.3</span>目標本益比法（合理價可能落在哪）</h3>
+<p class="lead">計算公式：預估EPS × 假設合理倍數。這是「已知倍數、反推目標價」，跟 5.2 節「已知股價、反推隱含倍數」是同一公式的不同用法，兩者不是同一件事。以下倍數為敏感度試算的假設情境，不是預測，倍數怎麼選沒有標準答案。</p>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">情境（假設倍數）</th><th>× 2026E EPS 190 元</th><th>× 2027E EPS 209.37 元</th></tr></thead><tbody>
+<tr><th class="rh">20 倍（保守／偏低）</th><td class="n">3,800 元</td><td class="n">4,187 元</td></tr>
+<tr><th class="rh">25 倍（中性）</th><td class="n">4,750 元</td><td class="n">5,234 元</td></tr>
+<tr><th class="rh">30 倍（樂觀／偏高）</th><td class="n">5,700 元</td><td class="n">6,281 元</td></tr>
+</tbody></table></div>
+<p class="cap">現價 5,290 元落在「25 倍× 2026E」與「30 倍× 2026E」之間，也接近「20 倍× 2027E」；換言之，目前股價已經預先反映了相當樂觀的估值假設（偏 25～30 倍區間），若後續獲利成長不如預期或倍數回落至歷史常態，回檔風險不小。</p>
+
+<h3><span class="rn">5.4</span>誠實揭露：預估的不確定性</h3>
+<ul>
+<li><b>歷史準確度尚可，但不代表本次同樣可靠：</b>2025 年全年 EPS 實際為 159.46 元，法說會前最後一次 FactSet 調查中位數為 158.77 元，誤差僅約 0.4%，屬於相對準確的案例，說明法人模型對「本業＋一般業外」的掌握度不差。</li>
+<li><b>但分析師之間的分歧正在擴大：</b>2026 年預估最高與最低值相差 33.40 元（約占中位數 17.6%），2027 年擴大到 47.41 元（22.6%），2028 年更擴大到 92.17 元（38.5%）。<b>年度越遠，分歧越大</b>，主因是 CPO 業務何時放量、放量後貢獻多少 EPS，目前市場沒有共識（第 3 步法說會中公司自承「後進者」，第 2 步 2.5 節提到 CPO 最快 2027 年中放量，仍屬未驗證的展望）。</li>
+<li><b>2026 年獲利結構本身依賴業外收支（第 3 步已驗證業外占上半年稅前淨利 18.13%），而業外收支高度受匯率影響，屬於法人模型較難精準預測的變數</b>，這是本檔股票 EPS 預估區間偏寬的結構性原因，不是分析師能力問題。</li>
+<li><b>找不到明確的 N+3（2029 年）預估</b>，FactSet 調查僅揭露至 2028 年，本節不強行外推，如實呈現資料邊界。</li>
+</ul>
+
+<div class="snap"><b>資料來源：</b><br>
+· 2026／2027／2028 年 EPS 預估中位數、平均值、最高最低值、目標價 5,220 元（17 位分析師，約 2026/07/29）：<a href="https://news.cnyes.com/news/id/6546129">鉅亨網 Factset 最新調查</a>。<br>
+· 較早兩次調查作為修正方向對照——2026/06/09（19 位分析師，中位數 187.21 元、目標價 3,150 元）：<a href="https://news.cnyes.com/news/id/6489920">鉅亨網 Factset 調查</a>；2026/07/14（中位數 187.55 元、目標價 5,150 元）：<a href="https://today.line.me/tw/v3/article/3N5xPMM">鉅亨速報／LINE TODAY</a>。<br>
+· 2025 年全年 EPS 實際值 159.46 元：<a href="https://blog.fugle.tw/post/earnings-call-3008-2026-1-8">富果直送法說會備忘錄（2026/01/08 法說會）</a>；法說會前最後一次 EPS 預估中位數 158.77 元：<a href="https://news.cnyes.com/news/id/6175131">鉅亨網 Factset 調查（2025 年度）</a>。<br>
+· 現價 5,290 元、近四季 EPS 185.75 元：延續第 2 步 2.1 節數字，不重複列出來源。<br>
+<b>推算數字標註：</b>前瞻本益比 27.8 倍／27.9 倍／25.3 倍、目標本益比法六組情境金額、估值區間寬度（最高－最低）——<b>皆為 Claude 依上述來源數字計算，非直接查得的公告欄位。</b></div>
+
+</section>
 <section id="step6"><div class="steptag">第 6 步／共 6 步</div><h2>投資決策推理</h2><div class="pending">僅在使用者主動詢問「會不會投資／該不該續抱」時才執行，不會自動附加。</div></section>
 <footer>
-  3008 大立光電 · 個股初步分析 · 報告版本 v2.2 · 生成時間 2026-08-19 04:37<br>
+  3008 大立光電 · 個股初步分析 · 報告版本 v2.3 · 生成時間 2026-08-19 04:40<br>
   本報告為財務數據的結構化整理與推理，不構成投資建議。所有數字以官方財報公告為準。
 </footer>
 </div>

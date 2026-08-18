@@ -67,6 +67,8 @@ b{font-weight:700}
 .negv-t{color:var(--neg);font-weight:700}
 .posv-t{color:var(--pos);font-weight:700}
 .tw{overflow-x:auto;margin:14px 0 6px;border:1px solid var(--rule);border-radius:6px;background:var(--card)}
+.chart-wrap{overflow-x:auto;margin:14px 0 6px;border:1px solid var(--rule);border-radius:6px;background:var(--card);padding:10px}
+.chart-wrap svg{display:block;min-width:820px;width:100%;height:auto}
 table.grid{border-collapse:collapse;width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px}
 table.grid.wide{min-width:900px}
 table.grid th,table.grid td{padding:7px 9px;border-bottom:1px solid var(--rule);text-align:right;white-space:nowrap}
@@ -134,12 +136,12 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">3008</span>大立光電</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。使用者提供的截圖雖含年度股價、漲跌幅與稅後 EPS 欄位，<b>本步驟一律不予採用</b>。</p>
   <div class="meta">
-    <span>報告版本 v2.1</span><span>生成時間 2026-08-19 04:33</span>
+    <span>報告版本 v2.2</span><span>生成時間 2026-08-19 04:37</span>
     <span>目前進度 第 2 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
   </div>
 </header>
 
-<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad" data-t="step3"><span class="k">03</span>法說會</button><button class="pad locked" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button></nav>
+<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad" data-t="step3"><span class="k">03</span>法說會</button><button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad locked" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button></nav>
 
 <section id="step1">
 <div class="steptag">第 1 步／共 6 步</div><h2>現金流量表六大規則分析（盲測）</h2>
@@ -577,11 +579,108 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 <p class="cap">法說會場次總覽（含歷史場次列表、地點、簡報連結）可參考 <a href="https://poorstock.com/earningcall/3008">poorstock.com 大立光法說會頁面</a>。若要針對特定主題進一步深入（例如：CPO 布局最新進展、毛利率下滑的產業成因、業外收支細項組成），請告訴我想聚焦的方向。</p>
 
 </section>
-<section id="step4"><div class="steptag">第 4 步／共 6 步</div><h2>營收趨勢視覺化</h2><div class="pending">待執行：近 8–12 期月營收長條圖與 YoY 變化。</div></section>
+<section id="step4"><div class="steptag">第 4 步／共 6 步</div><h2>營收趨勢視覺化</h2>
+
+<div class="key"><div class="kt">本步驟重點</div>
+<p><b>近 12 個月月營收呈區間震盪，2026 年以來重心明顯下移。</b>2025/10 曾達近期高點 62.61 億元，但此後波動加劇：2026/06 一度跌到 37.12 億元（近 12 個月最低），07 月回升至 48.77 億元，年減 10.6%。近 12 個月有 8 個月 YoY 為負，顯示營收基期逐漸墊高後成長動能轉弱，與第 3 步法說會揭露的<b>毛利率下滑、季節性拉貨淡季</b>兩條線索相呼應。</p></div>
+
+<h3><span class="rn">4.1</span>近 12 個月單月營收（2025/08－2026/07）</h3>
+<div class="chart-wrap">
+<svg viewBox="0 0 980 340" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace" font-size="12">
+<line x1="60" y1="280.0" x2="960" y2="280.0" stroke="#DEE1DC" stroke-width="1" stroke-dasharray="none" />
+<text x="52" y="284.0" text-anchor="end" fill="#6E7B8A">0</text>
+<line x1="60" y1="205.7" x2="960" y2="205.7" stroke="#DEE1DC" stroke-width="1" stroke-dasharray="3,3" />
+<text x="52" y="209.7" text-anchor="end" fill="#6E7B8A">20</text>
+<line x1="60" y1="131.4" x2="960" y2="131.4" stroke="#DEE1DC" stroke-width="1" stroke-dasharray="3,3" />
+<text x="52" y="135.4" text-anchor="end" fill="#6E7B8A">40</text>
+<line x1="60" y1="57.1" x2="960" y2="57.1" stroke="#DEE1DC" stroke-width="1" stroke-dasharray="3,3" />
+<text x="52" y="61.1" text-anchor="end" fill="#6E7B8A">60</text>
+<rect x="60.0" y="58.3" width="62.2" height="221.7" fill="#2E5266" rx="2"/>
+<text x="91.1" y="52.3" text-anchor="middle" fill="#131A22" font-weight="600">59.7</text>
+<text x="91.1" y="298.0" text-anchor="middle" fill="#3A4756">25’08</text>
+<text x="91.1" y="314.0" text-anchor="middle" fill="#B0453B" font-size="10.5">-14.8%</text>
+<rect x="136.2" y="48.4" width="62.2" height="231.6" fill="#2E5266" rx="2"/>
+<text x="167.2" y="42.4" text-anchor="middle" fill="#131A22" font-weight="600">62.4</text>
+<text x="167.2" y="298.0" text-anchor="middle" fill="#3A4756">25’09</text>
+<text x="167.2" y="314.0" text-anchor="middle" fill="#B0453B" font-size="10.5">-4.4%</text>
+<rect x="212.3" y="47.4" width="62.2" height="232.6" fill="#C08A2E" rx="2"/>
+<text x="243.4" y="41.4" text-anchor="middle" fill="#131A22" font-weight="600">62.6</text>
+<text x="243.4" y="298.0" text-anchor="middle" fill="#3A4756">25’10</text>
+<text x="243.4" y="314.0" text-anchor="middle" fill="#B0453B" font-size="10.5">-4.5%</text>
+<rect x="288.5" y="83.0" width="62.2" height="197.0" fill="#2E5266" rx="2"/>
+<text x="319.6" y="77.0" text-anchor="middle" fill="#131A22" font-weight="600">53.0</text>
+<text x="319.6" y="298.0" text-anchor="middle" fill="#3A4756">25’11</text>
+<text x="319.6" y="314.0" text-anchor="middle" fill="#B0453B" font-size="10.5">-11.8%</text>
+<rect x="364.7" y="71.4" width="62.2" height="208.6" fill="#2E5266" rx="2"/>
+<text x="395.7" y="65.4" text-anchor="middle" fill="#131A22" font-weight="600">56.2</text>
+<text x="395.7" y="298.0" text-anchor="middle" fill="#3A4756">25’12</text>
+<text x="395.7" y="314.0" text-anchor="middle" fill="#B0453B" font-size="10.5">-0.3%</text>
+<rect x="440.8" y="75.8" width="62.2" height="204.2" fill="#2E5266" rx="2"/>
+<text x="471.9" y="69.8" text-anchor="middle" fill="#131A22" font-weight="600">55.0</text>
+<text x="471.9" y="298.0" text-anchor="middle" fill="#3A4756">26’01</text>
+<text x="471.9" y="314.0" text-anchor="middle" fill="#2A6F5B" font-size="10.5">+11.1%</text>
+<rect x="517.0" y="108.7" width="62.2" height="171.3" fill="#2E5266" rx="2"/>
+<text x="548.1" y="102.7" text-anchor="middle" fill="#131A22" font-weight="600">46.1</text>
+<text x="548.1" y="298.0" text-anchor="middle" fill="#3A4756">26’02</text>
+<text x="548.1" y="314.0" text-anchor="middle" fill="#B0453B" font-size="10.5">-2.6%</text>
+<rect x="593.2" y="78.7" width="62.2" height="201.3" fill="#2E5266" rx="2"/>
+<text x="624.2" y="72.7" text-anchor="middle" fill="#131A22" font-weight="600">54.2</text>
+<text x="624.2" y="298.0" text-anchor="middle" fill="#3A4756">26’03</text>
+<text x="624.2" y="314.0" text-anchor="middle" fill="#2A6F5B" font-size="10.5">+10.8%</text>
+<rect x="669.3" y="80.8" width="62.2" height="199.2" fill="#2E5266" rx="2"/>
+<text x="700.4" y="74.8" text-anchor="middle" fill="#131A22" font-weight="600">53.6</text>
+<text x="700.4" y="298.0" text-anchor="middle" fill="#3A4756">26’04</text>
+<text x="700.4" y="314.0" text-anchor="middle" fill="#2A6F5B" font-size="10.5">+24.5%</text>
+<rect x="745.5" y="109.4" width="62.2" height="170.6" fill="#2E5266" rx="2"/>
+<text x="776.6" y="103.4" text-anchor="middle" fill="#131A22" font-weight="600">45.9</text>
+<text x="776.6" y="298.0" text-anchor="middle" fill="#3A4756">26’05</text>
+<text x="776.6" y="314.0" text-anchor="middle" fill="#2A6F5B" font-size="10.5">+42.7%</text>
+<rect x="821.7" y="142.1" width="62.2" height="137.9" fill="#D9A6A0" rx="2"/>
+<text x="852.7" y="136.1" text-anchor="middle" fill="#131A22" font-weight="600">37.1</text>
+<text x="852.7" y="298.0" text-anchor="middle" fill="#3A4756">26’06</text>
+<text x="852.7" y="314.0" text-anchor="middle" fill="#B0453B" font-size="10.5">-10.5%</text>
+<rect x="897.8" y="98.9" width="62.2" height="181.1" fill="#2E5266" rx="2"/>
+<text x="928.9" y="92.9" text-anchor="middle" fill="#131A22" font-weight="600">48.8</text>
+<text x="928.9" y="298.0" text-anchor="middle" fill="#3A4756">26’07</text>
+<text x="928.9" y="314.0" text-anchor="middle" fill="#B0453B" font-size="10.5">-10.6%</text>
+<line x1="60" y1="280" x2="960" y2="280" stroke="#131A22" stroke-width="1.5"/>
+</svg>
+</div>
+<p class="cap">長條圖數字為單月營收（億元），下方百分比為年增率（YoY）。金色長條為近 12 個月最高（2025/10，62.61 億元），淺紅長條為最低（2026/06，37.12 億元）。零軸線為粗黑線，虛線為 20/40/60 億元刻度。</p>
+
+<h3><span class="rn">4.2</span>單月營收明細表</h3>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">月份</th><th>單月營收（億元）</th><th>月增（%）</th><th>年增（%）</th><th>累計營收（億元）</th><th>累計年增（%）</th></tr></thead><tbody>
+<tr><th class="rh">2025/08</th><td class="n">59.68</td><td class="n posv">+10.2</td><td class="n negv">−14.8</td><td class="n">376.6</td><td class="n posv">+8.46</td></tr>
+<tr><th class="rh">2025/09</th><td class="n">62.35</td><td class="n posv">+4.47</td><td class="n negv">−4.42</td><td class="n">439.3</td><td class="n posv">+6.5</td></tr>
+<tr class="warnrow"><th class="rh">2025/10（高點）</th><td class="n posv-t"><b>62.61</b></td><td class="n posv">+0.4</td><td class="n negv">−4.54</td><td class="n">501.9</td><td class="n posv">+4.98</td></tr>
+<tr><th class="rh">2025/11</th><td class="n">53.03</td><td class="n negv">−15.3</td><td class="n negv">−11.8</td><td class="n">555.1</td><td class="n posv">+3.13</td></tr>
+<tr><th class="rh">2025/12</th><td class="n">56.17</td><td class="n posv">+5.92</td><td class="n negv">−0.33</td><td class="n">611.5</td><td class="n posv">+2.84</td></tr>
+<tr><th class="rh">2026/01</th><td class="n">54.99</td><td class="n negv">−2.1</td><td class="n posv">+11.1</td><td class="n">54.99</td><td class="n posv">+11.1</td></tr>
+<tr><th class="rh">2026/02</th><td class="n">46.13</td><td class="n negv">−16.1</td><td class="n negv">−2.6</td><td class="n">101.1</td><td class="n posv">+4.39</td></tr>
+<tr><th class="rh">2026/03</th><td class="n">54.20</td><td class="n posv">+17.5</td><td class="n posv">+10.8</td><td class="n">155.4</td><td class="n posv">+6.61</td></tr>
+<tr><th class="rh">2026/04</th><td class="n">53.62</td><td class="n negv">−1.06</td><td class="n posv">+24.5</td><td class="n">209.1</td><td class="n posv">+10.7</td></tr>
+<tr><th class="rh">2026/05</th><td class="n">45.93</td><td class="n negv">−14.4</td><td class="n posv">+42.7</td><td class="n">255</td><td class="n posv">+15.3</td></tr>
+<tr class="warnrow"><th class="rh">2026/06（低點）</th><td class="n negv-t"><b>37.12</b></td><td class="n negv">−19.2</td><td class="n negv">−10.5</td><td class="n">292.1</td><td class="n posv">+11.3</td></tr>
+<tr><th class="rh">2026/07</th><td class="n">48.77</td><td class="n posv">+31.4</td><td class="n negv">−10.6</td><td class="n">340.9</td><td class="n posv">+7.48</td></tr>
+</tbody></table></div>
+<p class="cap">2026 年累計年增率自 01 月起重新起算（Goodinfo 累計欄位以曆年為單位）。單月營收波動明顯大於累計數字，2026/05－06 月增分別為 −14.4%／−19.2%，07 月月增 +31.4% 屬回補性反彈，公司於第 3 步法說會中說明為新舊機種交替後動能回補。</p>
+
+<h3><span class="rn">4.3</span>與前幾步的交叉檢視</h3>
+<ul>
+<li><b>07 月營收年減 10.6%，但第 3 步法說會（07/09）已說明 8 月動能優於 7 月：</b>07 月數字本身已反映在最新一次法說會之後，屬於法說會後的實際驗證數據，與公司展望方向一致（月增 +31.4%）。</li>
+<li><b>2026/01－07 累計營收年增 7.49%，與第 2 步 2.4 節查得的「2026 年 1–7 月累計 340.86 億元、+7.49%」數字一致</b>，交叉驗證無誤。</li>
+<li><b>YoY 由正轉負的月份（2025/08－2025/12 皆為負）落在 2025 Q2 匯損期之後的高基期比較區間</b>，須留意 2025 下半年基期較高，會讓 2026 同期 YoY 數字承壓，非單純需求轉弱的訊號，需搭配毛利率走勢一併判讀。</li>
+</ul>
+
+<div class="snap"><b>資料來源：</b><br>
+· 近 12 個月（2025/08－2026/07）單月營收、月增率、年增率、累計營收、累計年增率：使用者提供 <a href="https://goodinfo.tw/tw/ShowSaleMonChart.asp?STOCK_ID=3008">Goodinfo！台灣股市資訊網 3008 月營收走勢圖</a> 截圖（查詢時間 2026/08/19）。<br>
+<b>本節未使用推論數字</b>——長條圖與表格數字均為截圖原始數字之直接呈現，未涉及 Claude 自行估算的假設性推算。</div>
+
+</section>
 <section id="step5"><div class="steptag">第 5 步／共 6 步</div><h2>前瞻本益比／EPS 預估</h2><div class="pending">待執行：市場法人 EPS 預估、前瞻本益比、目標本益比法情境試算。</div></section>
 <section id="step6"><div class="steptag">第 6 步／共 6 步</div><h2>投資決策推理</h2><div class="pending">僅在使用者主動詢問「會不會投資／該不該續抱」時才執行，不會自動附加。</div></section>
 <footer>
-  3008 大立光電 · 個股初步分析 · 報告版本 v2.1 · 生成時間 2026-08-19 04:33<br>
+  3008 大立光電 · 個股初步分析 · 報告版本 v2.2 · 生成時間 2026-08-19 04:37<br>
   本報告為財務數據的結構化整理與推理，不構成投資建議。所有數字以官方財報公告為準。
 </footer>
 </div>

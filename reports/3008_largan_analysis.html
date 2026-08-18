@@ -136,12 +136,12 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">3008</span>大立光電</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。使用者提供的截圖雖含年度股價、漲跌幅與稅後 EPS 欄位，<b>本步驟一律不予採用</b>。</p>
   <div class="meta">
-    <span>報告版本 v2.3</span><span>生成時間 2026-08-19 04:40</span>
+    <span>報告版本 v2.4</span><span>生成時間 2026-08-19 04:42</span>
     <span>目前進度 第 2 步／共 6 步</span><span>計分視窗 2009–2025（17 個完整年度）</span>
   </div>
 </header>
 
-<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad" data-t="step3"><span class="k">03</span>法說會</button><button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button></nav>
+<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad" data-t="step3"><span class="k">03</span>法說會</button><button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad" data-t="step6"><span class="k">06</span>投資決策</button></nav>
 
 <section id="step1">
 <div class="steptag">第 1 步／共 6 步</div><h2>現金流量表六大規則分析（盲測）</h2>
@@ -723,9 +723,37 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 <b>推算數字標註：</b>前瞻本益比 27.8 倍／27.9 倍／25.3 倍、目標本益比法六組情境金額、估值區間寬度（最高－最低）——<b>皆為 Claude 依上述來源數字計算，非直接查得的公告欄位。</b></div>
 
 </section>
-<section id="step6"><div class="steptag">第 6 步／共 6 步</div><h2>投資決策推理</h2><div class="pending">僅在使用者主動詢問「會不會投資／該不該續抱」時才執行，不會自動附加。</div></section>
+<section id="step6"><div class="steptag">第 6 步／共 6 步</div><h2>投資決策推理</h2>
+
+<div class="key warn"><div class="kt">聲明</div>
+<p>以下是根據前五步分析資料所做的<b>推理與觀點</b>，不是專業投資建議，Claude 不具理財顧問身份。實際投資決策請自行判斷並承擔風險。</p></div>
+
+<h3><span class="rn">6.1</span>核心結論：財務體質優良，但現在的股價已經把樂觀劇本先漲完了</h3>
+<p>呼應第 1 步的現金流結論——大立光是<b>「現金滿手的守成老將」</b>：17 年營業現金流沒有一年為負、融資活動沒有一年為正（零舉債），期末現金累積至 1,185 億元，總分 72.2/100（良好）。這個體質到第 5 步依然成立：負債比率僅 14.43%、流動比率 485.47%，財務安全性沒有問題。</p>
+<p><b>但「體質好」和「現在買貴不貴」是兩件事。</b>第 5 步已算出：現價 5,290 元已超過法人最新共識目標價 5,220 元，前瞻本益比約 27.8～27.9 倍，落在目標本益比法「25～30 倍」的偏樂觀區間；而支撐這個樂觀區間的兩個假設——<b>毛利率回升到 50% 以上</b>（第 3 步顯示仍卡在 49.41%）、<b>CPO 業務放量</b>（公司自承是後進者，最快 2027 年中，屬未驗證展望）——目前都還沒有被財報數字證實。</p>
+
+<h3><span class="rn">6.2</span>若尚未持有：現階段不建議追高進場</h3>
+<p>核心理由：<b>現價已經站在「CPO 故事會成功」的樂觀假設之上</b>，一旦故事延後兌現，股價的下修空間比上修空間大。等待以下訊號出現，會是相對合理的進場時機（訊號皆為<b>尚未發生、須持續觀察</b>）：</p>
+<ul>
+<li><b>訊號一（本業轉強）：</b>毛利率連續兩季重新站回 50% 以上（目前 26Q1／26Q2 為 49.40%／49.41%，止穩但尚未站回），代表本業獲利空間真正修復，而不只是業外收支撐盤。</li>
+<li><b>訊號二（CPO 進度具體化）：</b>CPO 產品出現具體的<b>客戶認證通過、送量產訂單、或營收貢獻金額</b>公告（目前僅到「FA 產品送樣認證」階段，尚無量產或營收數字），而非僅止於管理層口頭展望。</li>
+<li><b>訊號三（估值回到安全邊際）：</b>股價回落至 2026E EPS（190 元）的 25 倍附近（約 4,750 元）或以下，讓進場價格不必完全押注樂觀情境才能打平。</li>
+</ul>
+
+<h3><span class="rn">6.3</span>若已持有：可續抱，但要把「毛利率能否重回 50%」設為停損／停利的觀察錨</h3>
+<p>續抱理由：財務結構的下檔保護非常紮實（零負債、現金部位龐大、連續 30 年配息、26H1 仍以 41.5 元配息、配發率 50.39%），短期即使股價修正，公司本身的經營風險極低，不是「基本面惡化型」的續抱風險。</p>
+<p>但獲利品質的疑慮不能忽略——已持有者宜持續追蹤（訊號皆為<b>尚未發生、須持續觀察</b>，不是已經確認的事實）：</p>
+<ul>
+<li><b>正面訊號：</b>後續兩季毛利率若能重新突破 50%，代表本業獲利空間止穩回升，支持股價維持目前估值甚至更高。</li>
+<li><b>負面訊號：</b>若毛利率再度下滑跌破 49%（低於 26Q1／26Q2 水準），且業外收支同時轉為虧損（如台幣再度急升，重演 2025 Q2 EPS 僅 7.73 元的情境），雙重利空同時出現時，應重新檢視是否續抱。</li>
+<li><b>中性提醒：</b>07 月營收年減 10.6%、08 月動能公司自評優於 07 月（第 4 步、第 3 步），屬短期波動，單月數字不足以作為加碼或減碼的唯一依據，仍須以季度三率數字為準。</li>
+</ul>
+
+<div class="snap"><b>本節依據：</b>綜合第 1 步（現金流體質 72.2/100）、第 3 步（毛利率 49.41%、業外占稅前淨利 18.13%）、第 5 步（前瞻本益比 27.8～27.9 倍、現價已超過共識目標價 5,220 元）之分析結果進行推理，未另行查詢新資料來源。</div>
+
+</section>
 <footer>
-  3008 大立光電 · 個股初步分析 · 報告版本 v2.3 · 生成時間 2026-08-19 04:40<br>
+  3008 大立光電 · 個股初步分析 · 報告版本 v2.4 · 生成時間 2026-08-19 04:42<br>
   本報告為財務數據的結構化整理與推理，不構成投資建議。所有數字以官方財報公告為準。
 </footer>
 </div>

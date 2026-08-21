@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>0050 vs 00881 — 成分股結構比較</title>
+<title>0050 vs 00881 — 成分股結構與波動性比較</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -56,8 +56,21 @@ tr:last-child td{border-bottom:none}
 .legend{display:flex;gap:18px;font-size:12.5px;color:var(--ink-2);margin-bottom:14px;flex-wrap:wrap}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .swatch{width:11px;height:11px;border-radius:2px;display:inline-block}
+.line{width:16px;height:3px;border-radius:2px;display:inline-block}
+svg text{font-family:"IBM Plex Mono",monospace}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.kpi{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px 16px}
+.kpi .lbl{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.kpi .val{font-family:"Noto Serif TC",serif;font-weight:700;font-size:22px}
+.kpi.neg .val{color:var(--neg)}
+.kpi.pos .val{color:var(--pos)}
+.kpi .sm{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.methodbox{background:#FAFAF7;border:1px solid var(--rule);border-radius:8px;padding:16px 18px;font-size:13.5px;color:var(--ink-2)}
+.methodbox code{background:#EFE6D5;padding:1px 5px;border-radius:3px;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+@media(max-width:640px){.kpis{grid-template-columns:1fr 1fr}}
 .bars{display:flex;flex-direction:column;gap:10px}
-.barrow{display:grid;grid-template-columns:78px 1fr;gap:10px;align-items:center;font-size:13px}
+.barrow{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center;font-size:13px}
 .barrow .lbl{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);text-align:right}
 .bartrack{position:relative;height:34px}
 .barseg{position:absolute;top:0;height:14px;border-radius:0 3px 3px 0;
@@ -83,8 +96,8 @@ footer a{color:var(--accent)}
 
 <header class="hd">
   <div class="eyebrow">ETF Comparison · 主題討論</div>
-  <h1 class="title">0050 vs 00881<br>成分股結構比較</h1>
-  <p class="sub">元大台灣50（全市場市值型）與國泰台灣科技龍頭（純科技/AI供應鏈主題型）的成分股組成、集中度與產業涵蓋差異。</p>
+  <h1 class="title">0050 vs 00881<br>成分股結構與波動性比較</h1>
+  <p class="sub">元大台灣50（全市場市值型）與國泰台灣科技龍頭（純科技/AI供應鏈主題型）的成分股組成、集中度、產業涵蓋差異，以及近一年實測波動率、最大回撤、Beta值比較。</p>
   <div class="meta">
     <span>資料時間：2026/08</span>
     <span>資料來源：口袋證券、FTSE TWSE Taiwan 50 Index、臺灣指數公司</span>
@@ -95,8 +108,12 @@ footer a{color:var(--accent)}
 <nav class="stepnav">
   <a class="pad" href="#diff">三個核心差異</a>
   <a class="pad" href="#table">關鍵指標對照</a>
-  <a class="pad" href="#chart1sec">圖表一</a>
-  <a class="pad" href="#chart2sec">圖表二</a>
+  <a class="pad" href="#chart1sec">共同持股權重</a>
+  <a class="pad" href="#chart2sec">集中度與廣度</a>
+  <a class="pad" href="#vol-kpi">波動性指標</a>
+  <a class="pad" href="#vol-chart1">累積報酬走勢</a>
+  <a class="pad" href="#vol-chart2">波動指標對照</a>
+  <a class="pad" href="#vol-interp">波動性解讀</a>
   <a class="pad" href="#source">資料來源</a>
 </nav>
 
@@ -155,6 +172,103 @@ footer a{color:var(--accent)}
   <div class="disclaimer">本頁為個人研究討論紀錄，非投資建議，數據請以發行公司官網公告為準。</div>
 </section>
 
+<section id="vol-kpi">
+  <h2>波動性比較（近一年實測）</h2>
+  <p class="lead">以下改用近一年（2025/08/25–2026/08/21）每日收盤價，實測計算兩檔 ETF 的年化波動率、最大回撤、相關係數與 Beta 值，驗證上方結構差異是否真的反映在價格波動上。</p>
+  <div class="kpis">
+    <div class="kpi neg">
+      <div class="lbl">年化波動率</div>
+      <div class="val">28.79%</div>
+      <div class="sm">0050</div>
+    </div>
+    <div class="kpi neg">
+      <div class="lbl">年化波動率</div>
+      <div class="val">34.44%</div>
+      <div class="sm">00881</div>
+    </div>
+    <div class="kpi neg">
+      <div class="lbl">最大回撤</div>
+      <div class="val">-15.88%</div>
+      <div class="sm">0050（谷底 2026/07/30）</div>
+    </div>
+    <div class="kpi neg">
+      <div class="lbl">最大回撤</div>
+      <div class="val">-19.72%</div>
+      <div class="sm">00881（谷底 2026/07/30）</div>
+    </div>
+  </div>
+  <table>
+    <tr><th>指標</th><th>0050</th><th>00881</th></tr>
+    <tr><td>日報酬標準差</td><td class="num">1.814%</td><td class="num">2.169%</td></tr>
+    <tr><td>年化波動率</td><td class="num">28.79%</td><td class="num">34.44%</td></tr>
+    <tr><td>最大回撤（期間內）</td><td class="num">-15.88%</td><td class="num">-19.72%</td></tr>
+    <tr><td>近一年總報酬</td><td class="num">+98.58%</td><td class="num">+80.97%</td></tr>
+    <tr><td>與 0050 相關係數</td><td class="num">1.000</td><td class="num">0.912</td></tr>
+    <tr><td>Beta（相對 0050）</td><td class="num">1.00</td><td class="num">1.09</td></tr>
+  </table>
+</section>
+
+<section id="vol-chart1">
+  <h2>圖表三｜累積報酬走勢（基準化＝100）</h2>
+  <div class="chart-card">
+    <h3>0050 vs 00881 近一年走勢</h3>
+    <p class="chart-note">以 2025/08/25 收盤價為基準（=100），每5個交易日取樣一次，共48個資料點</p>
+    <div class="legend">
+      <span><i class="line" style="background:var(--accent)"></i>0050</span>
+      <span><i class="line" style="background:var(--peak)"></i>00881</span>
+    </div>
+    <svg viewBox="0 0 640 260" width="100%" style="max-width:640px">
+      <line x1="10" y1="214.9" x2="630" y2="214.9" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="14" y="211" font-size="10" fill="var(--ink-3)">100</text>
+      <polyline points="10.0,214.9 23.2,217.4 36.4,211.1 49.6,201.5 62.8,195.9 76.0,197.0 89.1,185.4 102.3,183.9 115.5,178.0 128.7,176.8 141.9,179.5 155.1,184.4 168.3,192.2 181.5,185.7 194.7,178.3 207.9,181.3 221.1,179.3 234.3,173.5 247.4,157.8 260.6,154.8 273.8,151.1 287.0,143.3 300.2,147.6 313.4,133.3 326.6,122.7 339.8,145.3 353.0,138.6 366.2,143.1 379.4,144.3 392.6,126.6 405.7,110.1 418.9,102.7 432.1,88.0 445.3,64.8 458.5,70.3 471.7,71.0 484.9,55.5 498.1,36.8 511.3,57.6 524.5,32.8 537.7,46.8 550.9,29.2 564.0,37.1 577.2,59.8 590.4,52.3 603.6,50.5 616.8,42.9 630.0,35.6"
+        fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="10.0,214.9 23.2,218.6 36.4,210.5 49.6,202.5 62.8,199.3 76.0,201.8 89.1,190.6 102.3,190.4 115.5,183.8 128.7,180.7 141.9,184.4 155.1,190.2 168.3,198.0 181.5,188.5 194.7,182.6 207.9,185.3 221.1,183.3 234.3,178.8 247.4,164.5 260.6,160.5 273.8,174.7 287.0,162.2 300.2,166.0 313.4,156.3 326.6,142.3 339.8,164.8 353.0,152.4 366.2,153.9 379.4,153.7 392.6,135.4 405.7,116.3 418.9,100.5 432.1,87.4 445.3,57.7 458.5,62.6 471.7,65.0 484.9,43.3 498.1,29.2 511.3,51.8 524.5,28.6 537.7,46.2 550.9,26.6 564.0,42.3 577.2,71.4 590.4,57.0 603.6,58.3 616.8,43.0 630.0,30.2"
+        fill="none" stroke="var(--peak)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+      <text x="10.0" y="254" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-family="IBM Plex Mono, monospace">2025-08</text>
+      <text x="76.0" y="254" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-family="IBM Plex Mono, monospace">2025-10</text>
+      <text x="181.5" y="254" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-family="IBM Plex Mono, monospace">2025-12</text>
+      <text x="300.2" y="254" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-family="IBM Plex Mono, monospace">2026-02</text>
+      <text x="392.6" y="254" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-family="IBM Plex Mono, monospace">2026-04</text>
+      <text x="498.1" y="254" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-family="IBM Plex Mono, monospace">2026-06</text>
+      <text x="603.6" y="254" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-family="IBM Plex Mono, monospace">2026-08</text>
+    </svg>
+  </div>
+</section>
+
+<section id="vol-chart2">
+  <h2>圖表四｜波動與績效指標對照</h2>
+  <div class="chart-card">
+    <h3>年化波動率 / 最大回撤 / 近一年總報酬（%）</h3>
+    <p class="chart-note">數值越大代表該項指標越高（回撤欄位為絕對值，數字越大代表跌得越深）</p>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--accent)"></i>0050</span>
+      <span><i class="swatch" style="background:var(--peak)"></i>00881</span>
+    </div>
+    <div class="bars" id="chart3"></div>
+  </div>
+</section>
+
+<section id="vol-interp">
+  <h2>波動性解讀</h2>
+  <div class="key">
+    <b>波動性：00881 &gt; 0050。</b>年化波動率 34.44% 對 28.79%，最大回撤 -19.72% 對 -15.88%，兩項指標都顯示 00881 更震盪，符合它「只有30檔、不含金融股、集中科技/AI供應鏈」的結構特性。Beta 1.09 代表 0050 每漲跌1%，00881 平均會多漲跌約0.09個百分點。
+  </div>
+  <ul class="pts">
+    <li><b>相關係數高達 0.912</b>：兩者連動性很強，不是互補分散的關係，同漲同跌居多——這也合理，因為前十大持股高度重疊。</li>
+    <li><b>報酬與波動不一定同向</b>：這一年反而是波動較低的 0050 總報酬較高（+98.58% vs +80.97%），主要是台積電在 0050 權重更高（58% vs 40%），這波 AI 行情台積電漲幅居功最大，稀釋了 00881 該有的「高波動應該伴隨更高報酬」的直覺。這是特定這一年的結果，不代表長期必然如此。</li>
+    <li><b>兩者最大回撤都發生在同一天（2026/07/30）</b>：進一步印證高度連動——系統性風險對兩者影響方向一致，只是幅度不同。</li>
+  </ul>
+  <div class="methodbox">
+    <p><b>計算方法</b></p>
+    <p><b>日報酬率</b>：<code>ret = close_t / close_t-1 - 1</code></p>
+    <p><b>年化波動率</b>：日報酬標準差 × √252（252為一年約略交易日數）</p>
+    <p><b>最大回撤</b>：以每日收盤價建構累積報酬序列，計算相對歷史高點的最大跌幅 <code>drawdown = cum/running_max - 1</code></p>
+    <p><b>Beta</b>：<code>Cov(00881報酬, 0050報酬) / Var(0050報酬)</code>，以0050為市場基準</p>
+    <p><b>相關係數</b>：兩檔日報酬率的皮爾森相關係數</p>
+    <p style="margin-top:10px;color:var(--ink-3)">計算基礎：240個共同交易日（2025/08/25–2026/08/21），資料由使用者提供之日交易報表（含開高低收）。</p>
+  </div>
+</section>
+
 <section id="source">
   <h2>資料來源</h2>
   <ul class="pts">
@@ -198,6 +312,12 @@ bar(document.getElementById('chart2'), [
   {label:"前十大權重", a:78.69, b:76.41},
   {label:"成分股數", a:50, b:30},
 ], "");
+
+bar(document.getElementById('chart3'), [
+  {label:"年化波動率", a:28.79, b:34.44},
+  {label:"最大回撤(絕對值)", a:15.88, b:19.72},
+  {label:"近一年總報酬", a:98.58, b:80.97},
+], "%");
 </script>
 
 </body>

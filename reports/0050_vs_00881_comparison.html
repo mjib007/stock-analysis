@@ -68,6 +68,8 @@ svg text{font-family:"IBM Plex Mono",monospace}
 .kpi .sm{font-size:11.5px;color:var(--ink-3);margin-top:2px}
 .methodbox{background:#FAFAF7;border:1px solid var(--rule);border-radius:8px;padding:16px 18px;font-size:13.5px;color:var(--ink-2)}
 .methodbox code{background:#EFE6D5;padding:1px 5px;border-radius:3px;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+.srcnote{font-size:12.5px;color:var(--ink-3);margin:14px 0 0;padding-top:10px;border-top:1px dashed var(--rule)}
+.srcnote a{color:var(--accent)}
 @media(max-width:640px){.kpis{grid-template-columns:1fr 1fr}}
 .bars{display:flex;flex-direction:column;gap:10px}
 .barrow{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center;font-size:13px}
@@ -114,7 +116,6 @@ footer a{color:var(--accent)}
   <a class="pad" href="#vol-chart1">累積報酬走勢</a>
   <a class="pad" href="#vol-chart2">波動指標對照</a>
   <a class="pad" href="#vol-interp">波動性解讀</a>
-  <a class="pad" href="#source">資料來源</a>
 </nav>
 
 <section id="diff">
@@ -137,6 +138,7 @@ footer a{color:var(--accent)}
     <tr><td>前十大合計權重</td><td class="num">78.69%</td><td class="num">76.41%</td></tr>
     <tr><td>換股頻率</td><td>季度審核（3、6、9、12月）</td><td>季度審核</td></tr>
   </table>
+  <div class="srcnote">資料來源：追蹤指數與換股規則｜<a href="https://yuantaetfs.com/product/detail/0050/Basic_information" target="_blank" rel="noopener">元大投信 0050 Basic Information</a>、<a href="https://aiinvest.sinotrade.com.tw/Stock/Content/TW/00881" target="_blank" rel="noopener">永豐金證券 豐存股 00881</a>；00881 更名沿革｜<a href="https://www.stockfeel.com.tw/5g-etf-00881-%E5%9C%8B%E6%B3%B0/" target="_blank" rel="noopener">股感 00881 國泰台灣科技龍頭ETF介紹</a></div>
 </section>
 
 <section id="chart1sec">
@@ -149,6 +151,7 @@ footer a{color:var(--accent)}
       <span><i class="swatch" style="background:var(--peak)"></i>00881</span>
     </div>
     <div class="bars" id="chart1"></div>
+    <div class="srcnote">資料來源：前十大成分股權重｜<a href="https://www.pocket.tw/etf/tw/0050/" target="_blank" rel="noopener">口袋證券 元大台灣50成分股總覽</a>、<a href="https://www.pocket.tw/etf/tw/00881/" target="_blank" rel="noopener">口袋證券 國泰台灣科技龍頭成分股總覽</a></div>
   </div>
 </section>
 
@@ -267,17 +270,6 @@ footer a{color:var(--accent)}
     <p><b>相關係數</b>：兩檔日報酬率的皮爾森相關係數</p>
     <p style="margin-top:10px;color:var(--ink-3)">計算基礎：240個共同交易日（2025/08/25–2026/08/21），資料由使用者提供之日交易報表（含開高低收）。</p>
   </div>
-</section>
-
-<section id="source">
-  <h2>資料來源</h2>
-  <ul class="pts">
-    <li>0050 前十大成分股權重｜<a href="https://www.pocket.tw/etf/tw/0050/" target="_blank" rel="noopener">口袋證券 元大台灣50成分股總覽</a></li>
-    <li>00881 前十大成分股權重｜<a href="https://www.pocket.tw/etf/tw/00881/" target="_blank" rel="noopener">口袋證券 國泰台灣科技龍頭成分股總覽</a></li>
-    <li>0050 追蹤指數與換股規則｜<a href="https://yuantaetfs.com/product/detail/0050/Basic_information" target="_blank" rel="noopener">元大投信 0050 Basic Information</a></li>
-    <li>00881 更名沿革（原5G+）｜<a href="https://www.stockfeel.com.tw/5g-etf-00881-%E5%9C%8B%E6%B3%B0/" target="_blank" rel="noopener">股感 00881 國泰台灣科技龍頭ETF介紹</a></li>
-    <li>00881 追蹤指數說明｜<a href="https://aiinvest.sinotrade.com.tw/Stock/Content/TW/00881" target="_blank" rel="noopener">永豐金證券 豐存股 00881</a></li>
-  </ul>
 </section>
 
 <footer>

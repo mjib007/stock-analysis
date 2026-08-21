@@ -16,6 +16,7 @@
   --blue:#2456a6; --blue-bg:#eaf1fb;
 }
 *{box-sizing:border-box}
+section{scroll-margin-top:64px}
 body{margin:0;background:var(--paper);color:var(--ink);
   font-family:"Noto Sans TC",system-ui,sans-serif;font-size:15.5px;line-height:1.75;
   -webkit-font-smoothing:antialiased}
@@ -63,6 +64,13 @@ tr:last-child td{border-bottom:none}
   display:flex;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:11px;color:#fff;padding-left:6px}
 .barseg.top{top:0}
 .barseg.bottom{top:18px}
+nav.stepnav{position:sticky;top:0;z-index:40;background:rgba(245,245,242,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);
+  margin:0 -22px 34px;padding:9px 22px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+.pad{flex:0 0 auto;border:1px solid var(--rule);background:var(--card);border-radius:999px;
+  padding:6px 15px;font-size:13px;color:var(--ink-2);cursor:pointer;white-space:nowrap;
+  text-decoration:none;font-family:"Noto Sans TC",sans-serif;transition:background .18s,color .18s,border-color .18s}
+.pad:hover{border-color:var(--accent);color:var(--accent)}
 footer{border-top:1px solid var(--rule);padding-top:20px;margin-top:56px;
   font-size:12.5px;color:var(--ink-3)}
 footer a{color:var(--accent)}
@@ -83,7 +91,15 @@ footer a{color:var(--accent)}
   </div>
 </header>
 
-<section>
+<nav class="stepnav">
+  <a class="pad" href="#diff">三個核心差異</a>
+  <a class="pad" href="#table">關鍵指標對照</a>
+  <a class="pad" href="#chart1sec">圖表一</a>
+  <a class="pad" href="#chart2sec">圖表二</a>
+  <a class="pad" href="#source">資料來源</a>
+</nav>
+
+<section id="diff">
   <h2>三個核心差異</h2>
   <ul class="pts">
     <li><b>選股邏輯不同</b>：0050 追蹤臺灣50指數，是全市場市值前50大；00881 追蹤特選科技龍頭通訊指數，只從科技/通訊供應鏈挑前30大，不含金融股。</li>
@@ -92,7 +108,7 @@ footer a{color:var(--accent)}
   </ul>
 </section>
 
-<section>
+<section id="table">
   <h2>關鍵指標對照</h2>
   <table>
     <tr><th>項目</th><th>0050 元大台灣50</th><th>00881 國泰台灣科技龍頭</th></tr>
@@ -105,7 +121,7 @@ footer a{color:var(--accent)}
   </table>
 </section>
 
-<section>
+<section id="chart1sec">
   <h2>圖表一｜共同持股權重對照</h2>
   <div class="chart-card">
     <h3>五檔重疊持股：0050 vs 00881 權重（%）</h3>
@@ -118,7 +134,7 @@ footer a{color:var(--accent)}
   </div>
 </section>
 
-<section>
+<section id="chart2sec">
   <h2>圖表二｜集中度與廣度對照</h2>
   <div class="chart-card">
     <h3>前十大合計權重 vs 成分股數</h3>
@@ -138,7 +154,7 @@ footer a{color:var(--accent)}
   <div class="disclaimer">本頁為個人研究討論紀錄，非投資建議，數據請以發行公司官網公告為準。</div>
 </section>
 
-<section>
+<section id="source">
   <h2>資料來源</h2>
   <ul class="pts">
     <li>0050 前十大成分股權重｜<a href="https://www.pocket.tw/etf/tw/0050/" target="_blank" rel="noopener">口袋證券 元大台灣50成分股總覽</a></li>

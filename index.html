@@ -38,6 +38,8 @@
   .card .ticker.special{color:var(--accent);background:#fdf3e1;}
   .card h3{font-size:15px;margin:0 0 10px;font-family:"Noto Serif TC",serif;line-height:1.4;}
   .card .date{font-size:11.5px;color:var(--sub);}
+  .card .visits{margin-top:8px;}
+  .card .visits img{height:18px;opacity:0.85;vertical-align:middle;}
 
   .empty{padding:40px 0;text-align:center;color:var(--sub);font-size:13.5px;display:none;}
 
@@ -78,23 +80,23 @@
 
 <script>
 const REPORTS = [
-  {ticker:"1560", name:"中砂", title:"中砂 1560｜台股個股初步分析", file:"reports/1560_cgw_analysis.html", date:"2026-08-03", type:"analysis"},
-  {ticker:"2327", name:"國巨", title:"2327 國巨｜現金流量表六大規則分析", file:"reports/2327_yageo_analysis.html", date:"2026-07-31", type:"analysis"},
-  {ticker:"2327", name:"國巨（更新版）", title:"國巨 2327 個股初步分析（更新版）", file:"reports/2327_yageo_analysis_20260801.html", date:"2026-08-01", type:"analysis"},
-  {ticker:"2330", name:"台積電", title:"2330 台積電｜現金流量表六大規則分析", file:"reports/2330_analysis.html", date:"2026-07-25", type:"analysis"},
-  {ticker:"2352", name:"佳世達", title:"佳世達 (2352) 個股分析報告", file:"reports/qisda_2352.html", date:"2026-07-25", type:"analysis"},
-  {ticker:"2492", name:"華新科", title:"華新科（2492）初步分析｜現金流量表六大規則", file:"reports/2492_walsin_analysis.html", date:"2026-07-26", type:"analysis"},
-  {ticker:"2762", name:"世界健身-KY", title:"世界健身-KY（2762）股票初步分析報告", file:"reports/2762_worldgym_analysis.html", date:"2026-07-27", type:"analysis"},
-  {ticker:"3008", name:"大立光電", title:"3008 大立光電｜台股個股初步分析", file:"reports/3008_largan_analysis.html", date:"2026-08-19", type:"analysis"},
-  {ticker:"3037", name:"欣興電子", title:"欣興電子 3037｜台股個股初步分析", file:"reports/3037_unimicron_analysis.html", date:"2026-08-06", type:"analysis"},
-  {ticker:"3260", name:"威剛科技", title:"威剛科技 3260｜台股個股初步分析", file:"reports/3260_adata_analysis.html", date:"2026-07-26", type:"analysis"},
-  {ticker:"3711", name:"日月光投控", title:"3711 日月光投控｜台股初步分析", file:"reports/3711_ase_analysis.html", date:"2026-08-09", type:"analysis"},
-  {ticker:"6239", name:"力成科技", title:"力成科技(6239) 2026年第二季財報分析", file:"reports/6239_powertech_analysis.html", date:"2026-08-10", type:"analysis"},
-  {ticker:"6446", name:"藥華藥 × AOP", title:"藥華藥 × AOP 國際仲裁案時間軸", file:"reports/6446_aop_arbitration_timeline.html", date:"2026-08-09", type:"special"},
-  {ticker:"7769", name:"鴻勁精密", title:"7769 鴻勁精密｜台股初步分析", file:"reports/7769_hongjin_analysis.html", date:"2026-08-08", type:"analysis"},
-  {ticker:"7823", name:"奧義賽博科技", title:"7823 奧義賽博科技 115年Q1 獲利來源與虧損原因分析", file:"reports/7823_cycraft_analysis.html", date:"2026-08-08", type:"analysis"},
-  {ticker:"5904", name:"寶雅生活館", title:"寶雅 5904｜台股個股初步分析（六步驟完成）", file:"reports/5904_poya_analysis.html", date:"2026-08-15", type:"analysis"},
-  {ticker:"0050×00881", name:"0050 vs 00881", title:"0050 vs 00881｜成分股結構與波動性比較", file:"reports/0050_vs_00881_comparison.html", date:"2026-08-22", type:"special"},
+  {ticker:"1560", name:"中砂", title:"中砂 1560｜台股個股初步分析", file:"reports/1560_cgw_analysis.html", date:"2026-08-03", type:"analysis", pageId:"1560"},
+  {ticker:"2327", name:"國巨", title:"2327 國巨｜現金流量表六大規則分析", file:"reports/2327_yageo_analysis.html", date:"2026-07-31", type:"analysis", pageId:"2327"},
+  {ticker:"2327", name:"國巨（更新版）", title:"國巨 2327 個股初步分析（更新版）", file:"reports/2327_yageo_analysis_20260801.html", date:"2026-08-01", type:"analysis", pageId:"2327v2"},
+  {ticker:"2330", name:"台積電", title:"2330 台積電｜現金流量表六大規則分析", file:"reports/2330_analysis.html", date:"2026-07-25", type:"analysis", pageId:"2330"},
+  {ticker:"2352", name:"佳世達", title:"佳世達 (2352) 個股分析報告", file:"reports/qisda_2352.html", date:"2026-07-25", type:"analysis", pageId:"2352"},
+  {ticker:"2492", name:"華新科", title:"華新科（2492）初步分析｜現金流量表六大規則", file:"reports/2492_walsin_analysis.html", date:"2026-07-26", type:"analysis", pageId:"2492"},
+  {ticker:"2762", name:"世界健身-KY", title:"世界健身-KY（2762）股票初步分析報告", file:"reports/2762_worldgym_analysis.html", date:"2026-07-27", type:"analysis", pageId:"2762"},
+  {ticker:"3008", name:"大立光電", title:"3008 大立光電｜台股個股初步分析", file:"reports/3008_largan_analysis.html", date:"2026-08-19", type:"analysis", pageId:"3008"},
+  {ticker:"3037", name:"欣興電子", title:"欣興電子 3037｜台股個股初步分析", file:"reports/3037_unimicron_analysis.html", date:"2026-08-06", type:"analysis", pageId:"3037"},
+  {ticker:"3260", name:"威剛科技", title:"威剛科技 3260｜台股個股初步分析", file:"reports/3260_adata_analysis.html", date:"2026-07-26", type:"analysis", pageId:"3260"},
+  {ticker:"3711", name:"日月光投控", title:"3711 日月光投控｜台股初步分析", file:"reports/3711_ase_analysis.html", date:"2026-08-09", type:"analysis", pageId:"3711"},
+  {ticker:"6239", name:"力成科技", title:"力成科技(6239) 2026年第二季財報分析", file:"reports/6239_powertech_analysis.html", date:"2026-08-10", type:"analysis", pageId:"6239"},
+  {ticker:"6446", name:"藥華藥 × AOP", title:"藥華藥 × AOP 國際仲裁案時間軸", file:"reports/6446_aop_arbitration_timeline.html", date:"2026-08-09", type:"special", pageId:"6446"},
+  {ticker:"7769", name:"鴻勁精密", title:"7769 鴻勁精密｜台股初步分析", file:"reports/7769_hongjin_analysis.html", date:"2026-08-08", type:"analysis", pageId:"7769"},
+  {ticker:"7823", name:"奧義賽博科技", title:"7823 奧義賽博科技 115年Q1 獲利來源與虧損原因分析", file:"reports/7823_cycraft_analysis.html", date:"2026-08-08", type:"analysis", pageId:"7823"},
+  {ticker:"5904", name:"寶雅生活館", title:"寶雅 5904｜台股個股初步分析（六步驟完成）", file:"reports/5904_poya_analysis.html", date:"2026-08-15", type:"analysis", pageId:"5904"},
+  {ticker:"0050×00881", name:"0050 vs 00881", title:"0050 vs 00881｜成分股結構與波動性比較", file:"reports/0050_vs_00881_comparison.html", date:"2026-08-22", type:"special", pageId:"0050vs00881"},
 ];
 
 let sortDesc = true;
@@ -119,6 +121,7 @@ function render(){
       <span class="ticker ${r.type==='special'?'special':''}">${r.ticker}｜${r.name}</span>
       <h3>${r.title}</h3>
       <div class="date">最後更新：${r.date}</div>
+      <div class="visits"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.stock-analysis.${r.pageId}" alt="瀏覽次數"></div>
     </a>
   `).join('');
 

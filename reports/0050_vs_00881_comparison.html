@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0050 vs 00881 — 成分股結構比較</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131A22; --ink-2:#3A4756; --ink-3:#6E7B8A;
+  --paper:#F5F5F2; --card:#FFFFFF; --rule:#DEE1DC;
+  --pos:#2A6F5B; --neg:#B0453B; --peak:#C08A2E; --trough:#D9A6A0;
+  --band:#EFE6D5; --accent:#2E5266;
+  --blue:#2456a6; --blue-bg:#eaf1fb;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans TC",system-ui,sans-serif;font-size:15.5px;line-height:1.75;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px 90px}
+header.hd{padding:48px 0 24px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+h1.title{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(26px,4.6vw,42px);
+  line-height:1.18;margin:0 0 10px;letter-spacing:-.01em}
+.sub{color:var(--ink-2);max-width:66ch;margin:0}
+.meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px 22px;
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-3)}
+section{margin:44px 0}
+h2{font-family:"Noto Serif TC",serif;font-weight:700;font-size:24px;margin:0 0 16px}
+h3{font-family:"Noto Serif TC",serif;font-weight:700;font-size:17px;margin:0 0 10px}
+p{margin:10px 0}
+.lead{color:var(--ink-2)}
+.key{background:#FFFDF5;border-left:5px solid var(--peak);border-radius:0 6px 6px 0;
+  padding:15px 20px;margin:20px 0}
+ul.pts{margin:10px 0;padding-left:20px}
+ul.pts li{margin:8px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;background:var(--card);
+  border:1px solid var(--rule);font-size:14px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule)}
+th{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-3);background:#FAFAF7}
+td.num{font-family:"IBM Plex Mono",monospace}
+tr:last-child td{border-bottom:none}
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  padding:2px 9px;border-radius:999px;border:1px solid var(--rule);color:var(--ink-2);margin-right:6px}
+.badge.a{border-color:var(--accent);color:var(--accent)}
+.badge.b{border-color:var(--peak);color:var(--peak)}
+.chart-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;
+  padding:22px 24px 18px;margin:16px 0}
+.chart-card h3{margin-bottom:2px}
+.chart-note{font-size:12.5px;color:var(--ink-3);margin:2px 0 16px}
+.legend{display:flex;gap:18px;font-size:12.5px;color:var(--ink-2);margin-bottom:14px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.swatch{width:11px;height:11px;border-radius:2px;display:inline-block}
+.bars{display:flex;flex-direction:column;gap:10px}
+.barrow{display:grid;grid-template-columns:78px 1fr;gap:10px;align-items:center;font-size:13px}
+.barrow .lbl{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);text-align:right}
+.bartrack{position:relative;height:34px}
+.barseg{position:absolute;top:0;height:14px;border-radius:0 3px 3px 0;
+  display:flex;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:11px;color:#fff;padding-left:6px}
+.barseg.top{top:0}
+.barseg.bottom{top:18px}
+footer{border-top:1px solid var(--rule);padding-top:20px;margin-top:56px;
+  font-size:12.5px;color:var(--ink-3)}
+footer a{color:var(--accent)}
+.disclaimer{background:#FDF3F1;border-left:5px solid var(--neg);border-radius:0 6px 6px 0;
+  padding:12px 18px;font-size:13px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hd">
+  <div class="eyebrow">ETF Comparison · 主題討論</div>
+  <h1 class="title">0050 vs 00881<br>成分股結構比較</h1>
+  <p class="sub">元大台灣50（全市場市值型）與國泰台灣科技龍頭（純科技/AI供應鏈主題型）的成分股組成、集中度與產業涵蓋差異。</p>
+  <div class="meta">
+    <span>資料時間：2026/08</span>
+    <span>資料來源：口袋證券、FTSE TWSE Taiwan 50 Index、臺灣指數公司</span>
+  </div>
+</header>
+
+<section>
+  <h2>三個核心差異</h2>
+  <ul class="pts">
+    <li><b>選股邏輯不同</b>：0050 追蹤臺灣50指數，是全市場市值前50大；00881 追蹤特選科技龍頭通訊指數，只從科技/通訊供應鏈挑前30大，不含金融股。</li>
+    <li><b>集中方式不同</b>：兩者前十大合計權重相近（約77–79%），但 0050 集中在台積電一檔獨大（58%），00881 台積電權重較低（40%）、聯發科與台達電權重明顯拉高，並納入川湖、奇鋐、大立光等 AI 伺服器供應鏈中小型股。</li>
+    <li><b>產業純度不同</b>：0050 為湊滿50檔全市場大型股，納入中信金、富邦金等金融股稀釋科技曝險；00881 完全排除金融股，是較純的科技/AI 主題配置。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>關鍵指標對照</h2>
+  <table>
+    <tr><th>項目</th><th>0050 元大台灣50</th><th>00881 國泰台灣科技龍頭</th></tr>
+    <tr><td>追蹤指數</td><td>臺灣50指數（全市場市值前50大）</td><td>特選科技龍頭通訊指數（原5G+指數）</td></tr>
+    <tr><td>成分股數</td><td class="num">50 檔</td><td class="num">30 檔</td></tr>
+    <tr><td>產業涵蓋</td><td>全市場（半導體、金融、電子、傳產等）</td><td>純科技／AI供應鏈（不含金融股）</td></tr>
+    <tr><td>台積電權重</td><td class="num">58.11%</td><td class="num">39.98%</td></tr>
+    <tr><td>前十大合計權重</td><td class="num">78.69%</td><td class="num">76.41%</td></tr>
+    <tr><td>換股頻率</td><td>季度審核（3、6、9、12月）</td><td>季度審核</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>圖表一｜共同持股權重對照</h2>
+  <div class="chart-card">
+    <h3>五檔重疊持股：0050 vs 00881 權重（%）</h3>
+    <p class="chart-note">取兩檔 ETF 前十大中重疊的股票，比較同一檔股票在兩邊的權重差異</p>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--accent)"></i>0050</span>
+      <span><i class="swatch" style="background:var(--peak)"></i>00881</span>
+    </div>
+    <div class="bars" id="chart1"></div>
+  </div>
+</section>
+
+<section>
+  <h2>圖表二｜集中度與廣度對照</h2>
+  <div class="chart-card">
+    <h3>前十大合計權重 vs 成分股數</h3>
+    <p class="chart-note">左：前十大權重佔比越高代表越集中；右：成分股數越多代表分散越廣</p>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--accent)"></i>0050</span>
+      <span><i class="swatch" style="background:var(--peak)"></i>00881</span>
+    </div>
+    <div class="bars" id="chart2"></div>
+  </div>
+</section>
+
+<section>
+  <div class="key">
+    <b>簡單判斷法：</b>想要「大盤代表性＋分散」選 0050；想要「更集中壓注 AI 供應鏈、犧牲部分分散度換取更高科技純度」選 00881。兩者持股重疊度不低（台積電、聯發科、台達電、鴻海、聯電同時是雙方前十大），差異主要在「要不要金融股」與「AI 中小型供應鏈股的權重高低」。
+  </div>
+  <div class="disclaimer">本頁為個人研究討論紀錄，非投資建議，數據請以發行公司官網公告為準。</div>
+</section>
+
+<footer>
+  資料整理日期 2026-08-21｜<a href="../index.html">← 回到分析總覽</a>
+</footer>
+
+</div>
+
+<script>
+function bar(container, rows, unit){
+  const max = Math.max(...rows.map(r => Math.max(r.a, r.b)));
+  container.innerHTML = rows.map(r => `
+    <div class="barrow">
+      <div class="lbl">${r.label}</div>
+      <div class="bartrack">
+        <div class="barseg top" style="width:${(r.a/max*100).toFixed(1)}%;background:var(--accent)">${r.a}${unit}</div>
+        <div class="barseg bottom" style="width:${(r.b/max*100).toFixed(1)}%;background:var(--peak)">${r.b}${unit}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+bar(document.getElementById('chart1'), [
+  {label:"台積電", a:58.11, b:39.98},
+  {label:"聯發科", a:5.45, b:9.37},
+  {label:"台達電", a:3.37, b:5.96},
+  {label:"鴻海", a:3.01, b:4.83},
+  {label:"聯電", a:1.35, b:2.83},
+], "%");
+
+bar(document.getElementById('chart2'), [
+  {label:"前十大權重", a:78.69, b:76.41},
+  {label:"成分股數", a:50, b:30},
+], "");
+</script>
+
+</body>
+</html>

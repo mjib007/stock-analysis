@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>00737 vs 00851 vs 00762 — AI／機器人主題ETF成分股比較</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131A22; --ink-2:#3A4756; --ink-3:#6E7B8A;
+  --paper:#F5F5F2; --card:#FFFFFF; --rule:#DEE1DC;
+  --pos:#2A6F5B; --neg:#B0453B; --peak:#C08A2E; --trough:#D9A6A0;
+  --band:#EFE6D5; --accent:#2E5266;
+  --c737:#2E5266; --c851:#C08A2E; --c762:#7A9E7E;
+}
+*{box-sizing:border-box}
+section{scroll-margin-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans TC",system-ui,sans-serif;font-size:15.5px;line-height:1.75;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px 90px}
+header.hd{padding:48px 0 24px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+h1.title{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(24px,4.2vw,38px);
+  line-height:1.22;margin:0 0 10px;letter-spacing:-.01em}
+.sub{color:var(--ink-2);max-width:70ch;margin:0}
+.meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px 22px;
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-3)}
+.version{margin-top:8px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3)}
+section{margin:44px 0}
+h2{font-family:"Noto Serif TC",serif;font-weight:700;font-size:23px;margin:0 0 16px}
+h3{font-family:"Noto Serif TC",serif;font-weight:700;font-size:16.5px;margin:0 0 10px}
+p{margin:10px 0}
+.lead{color:var(--ink-2)}
+.key{background:#FFFDF5;border-left:5px solid var(--peak);border-radius:0 6px 6px 0;
+  padding:15px 20px;margin:20px 0}
+ul.pts{margin:10px 0;padding-left:20px}
+ul.pts li{margin:8px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;background:var(--card);
+  border:1px solid var(--rule);font-size:13.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--rule)}
+th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-3);background:#FAFAF7}
+td.num{font-family:"IBM Plex Mono",monospace;text-align:right}
+tr:last-child td{border-bottom:none}
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  padding:2px 9px;border-radius:999px;border:1px solid var(--rule);color:var(--ink-2);margin-right:6px}
+.badge.a{border-color:var(--c737);color:var(--c737)}
+.badge.b{border-color:var(--c851);color:var(--c851)}
+.badge.c{border-color:var(--c762);color:var(--c762)}
+.chart-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;
+  padding:22px 24px 18px;margin:16px 0}
+.chart-card h3{margin-bottom:2px}
+.chart-note{font-size:12.5px;color:var(--ink-3);margin:2px 0 16px}
+.legend{display:flex;gap:18px;font-size:12.5px;color:var(--ink-2);margin-bottom:14px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.swatch{width:11px;height:11px;border-radius:2px;display:inline-block}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.kpi{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px 16px}
+.kpi .lbl{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-3);
+  text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.kpi .val{font-family:"Noto Serif TC",serif;font-weight:700;font-size:20px}
+.kpi .sm{font-size:11px;color:var(--ink-3);margin-top:2px}
+.srcnote{font-size:12.5px;color:var(--ink-3);margin:14px 0 0;padding-top:10px;border-top:1px dashed var(--rule)}
+.srcnote a{color:var(--accent)}
+@media(max-width:640px){.kpis{grid-template-columns:1fr}}
+.bars3{display:flex;flex-direction:column;gap:16px}
+.grow{display:grid;grid-template-columns:82px 1fr;gap:10px;align-items:start}
+.grow .glbl{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);
+  text-align:right;padding-top:3px}
+.gbars{display:flex;flex-direction:column;gap:3px}
+.gbarrow{display:flex;align-items:center;gap:6px}
+.gbartrack{position:relative;flex:1;height:13px;background:#F1F1EE;border-radius:2px;overflow:visible}
+.gbarfill{height:100%;border-radius:2px 0 0 2px}
+.gbarval{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-2);width:42px;flex-shrink:0}
+nav.stepnav{position:sticky;top:0;z-index:40;background:rgba(245,245,242,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);
+  margin:0 -22px 34px;padding:9px 22px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+.pad{flex:0 0 auto;border:1px solid var(--rule);background:var(--card);border-radius:999px;
+  padding:6px 15px;font-size:13px;color:var(--ink-2);cursor:pointer;white-space:nowrap;
+  text-decoration:none;font-family:"Noto Sans TC",sans-serif;transition:background .18s,color .18s,border-color .18s}
+.pad:hover{border-color:var(--accent);color:var(--accent)}
+footer{border-top:1px solid var(--rule);padding-top:20px;margin-top:56px;
+  font-size:12.5px;color:var(--ink-3)}
+footer a{color:var(--accent)}
+.disclaimer{background:#FDF3F1;border-left:5px solid var(--neg);border-radius:0 6px 6px 0;
+  padding:12px 18px;font-size:13px;color:var(--ink-2)}
+.concbar{display:flex;flex-direction:column;gap:12px}
+.concrow{display:grid;grid-template-columns:110px 1fr 60px;gap:10px;align-items:center;font-size:13px}
+.concrow .lbl{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);text-align:right}
+.conctrack{height:20px;background:#F1F1EE;border-radius:3px;overflow:hidden}
+.concfill{height:100%;display:flex;align-items:center;color:#fff;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;padding-left:8px}
+.concval{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hd">
+  <div class="eyebrow">ETF Comparison · 主題討論</div>
+  <h1 class="title">00737 vs 00851 vs 00762<br>AI／機器人主題ETF成分股比較</h1>
+  <p class="sub">國泰AI+Robo（00737）、台新全球AI（00851）、元大全球AI（00762）三檔台股掛牌之全球AI／機器人主題ETF，比較加權邏輯、持股集中度、前十大成分股與三檔共同持股權重差異。</p>
+  <div class="meta">
+    <span>成分股資料日期：2026/08/20</span>
+    <span>資料來源：玩股網 ETF成分股頁面、各投信官網</span>
+  </div>
+  <div class="version">版次 v1.0　｜　建立日期 2026-08-23</div>
+  <div style="margin-top:10px;"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.stock-analysis.00737-00851-00762-comparison" alt="瀏覽次數" style="height:20px;"></div>
+</header>
+
+<nav class="stepnav">
+  <a class="pad" href="#diff">三個核心差異</a>
+  <a class="pad" href="#table">基本資料對照</a>
+  <a class="pad" href="#top10">前十大成分股</a>
+  <a class="pad" href="#conc">持股集中度</a>
+  <a class="pad" href="#overlap">共同持股權重</a>
+  <a class="pad" href="#interp">解讀與觀察重點</a>
+</nav>
+
+<section id="diff">
+  <h2>三個核心差異</h2>
+  <ul class="pts">
+    <li><b>加權邏輯不同</b>：00737 採「改良式等權重」，個股權重普遍落在0.3%~2.2%之間，前十大合計僅約18.8%；00851、00762 皆為市值加權，前十大合計分別高達約49.4%與60.2%，權重高度集中在少數科技巨頭。</li>
+    <li><b>選股純度不同</b>：00762 追蹤STOXX全球人工智慧指數，要求成分股「AI相關營收佔比逾50%」，是三檔中AI純度最高的；00851 追蹤SG全球AI機器人精選指數，涵蓋範圍較廣（含工業、醫療保健）；00737 涵蓋上中下游110餘檔，包含大量中小型軟體與機器人應用公司。</li>
+    <li><b>持股風格不同</b>：00737像是「AI供應鏈全面撒網」的分散配置；00851、00762則更接近「AI／科技權值股集合」，漲跌與輝達、微軟、博通等巨頭高度連動，尤其00762前十大幾乎就是輝達、微軟、Meta、Alphabet等美股權值科技股的縮影。</li>
+  </ul>
+</section>
+
+<section id="table">
+  <h2>基本資料對照</h2>
+  <table>
+    <tr><th>項目</th><th>00737 國泰AI+Robo</th><th>00851 台新全球AI</th><th>00762 元大全球AI</th></tr>
+    <tr><td>追蹤指數</td><td>納斯達克CTA全球人工智慧及機器人指數</td><td>SG全球AI機器人精選指數</td><td>STOXX全球人工智慧指數</td></tr>
+    <tr><td>加權方式</td><td>改良式等權重</td><td>市值加權（Smart Beta）</td><td>市值加權（AI營收佔比&gt;50%篩選）</td></tr>
+    <tr><td>成分股數（含期貨）</td><td class="num">約116檔＋期貨4.07%</td><td class="num">58檔＋期貨4.83%</td><td class="num">約81檔＋期貨4.49%</td></tr>
+    <tr><td>前十大合計權重</td><td class="num">18.79%</td><td class="num">49.42%</td><td class="num">60.21%</td></tr>
+    <tr><td>規模（億元台幣）</td><td class="num">9.17</td><td class="num">3.88</td><td class="num">54.17</td></tr>
+    <tr><td>成立日期</td><td>2018/05/29</td><td>2019/07/30</td><td>2019年（元大投信）</td></tr>
+    <tr><td>管理費</td><td class="num">0.85%</td><td class="num">0.75%</td><td>—</td></tr>
+    <tr><td>配息</td><td>—</td><td>年配</td><td>—</td></tr>
+  </table>
+  <div class="srcnote">資料來源：<a href="https://www.wantgoo.com/stock/etf/00737/constituent" target="_blank" rel="noopener">玩股網 00737成分股</a>、<a href="https://www.wantgoo.com/stock/etf/00851/constituent" target="_blank" rel="noopener">玩股網 00851成分股</a>、<a href="https://www.wantgoo.com/stock/etf/00762/constituent" target="_blank" rel="noopener">玩股網 00762成分股</a>（2026/08/20）；管理費／成立日｜<a href="https://fundhot.com/fund/detail/00851%E5%8F%B0%E6%96%B0SG%E5%85%A8%E7%90%83AI%E6%A9%9F%E5%99%A8%E4%BA%BA%E7%B2%BE%E9%81%B8ETF%E5%9F%BA%E9%87%91(%E5%8F%B0%E5%B9%A3)/FH1001471" target="_blank" rel="noopener">強ETF 00851</a>、<a href="https://fundhot.com/fund/detail/00737%E5%9C%8B%E6%B3%B0%E7%B4%8D%E6%96%AF%E9%81%94%E5%85%8B%E5%85%A8%E7%90%83%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%8F%8A%E6%A9%9F%E5%99%A8%E4%BA%BAETF%E5%9F%BA%E9%87%91(%E5%8F%B0%E5%B9%A3)/FH1001469" target="_blank" rel="noopener">強ETF 00737</a></div>
+</section>
+
+<section id="top10">
+  <h2>前十大成分股</h2>
+  <table>
+    <tr><th>排名</th><th>00737 國泰AI+Robo</th><th class="num">權重</th><th>00851 台新全球AI</th><th class="num">權重</th><th>00762 元大全球AI</th><th class="num">權重</th></tr>
+    <tr><td>1</td><td>Appian（軟體）</td><td class="num">2.20%</td><td>SK海力士</td><td class="num">5.20%</td><td>微軟</td><td class="num">9.81%</td></tr>
+    <tr><td>2</td><td>CCC Intelligent（軟體）</td><td class="num">2.19%</td><td>蘋果</td><td class="num">5.13%</td><td>輝達</td><td class="num">8.43%</td></tr>
+    <tr><td>3</td><td>Oceaneering（海洋機器人）</td><td class="num">1.90%</td><td>亞馬遜</td><td class="num">5.03%</td><td>Meta</td><td class="num">7.64%</td></tr>
+    <tr><td>4</td><td>UiPath（RPA軟體）</td><td class="num">1.88%</td><td>Alphabet</td><td class="num">4.95%</td><td>Alphabet</td><td class="num">7.58%</td></tr>
+    <tr><td>5</td><td>Workday（企業軟體）</td><td class="num">1.87%</td><td>艾司摩爾</td><td class="num">4.93%</td><td>Palantir</td><td class="num">5.94%</td></tr>
+    <tr><td>6</td><td>Tempus AI（醫療AI）</td><td class="num">1.83%</td><td>台積電</td><td class="num">4.89%</td><td>美光</td><td class="num">4.38%</td></tr>
+    <tr><td>7</td><td>Illumina（基因定序）</td><td class="num">1.81%</td><td>微軟</td><td class="num">4.82%</td><td>超微(AMD)</td><td class="num">4.30%</td></tr>
+    <tr><td>8</td><td>SentinelOne（資安）</td><td class="num">1.75%</td><td>美光</td><td class="num">4.81%</td><td>博通</td><td class="num">4.23%</td></tr>
+    <tr><td>9</td><td>Palo Alto Networks（資安）</td><td class="num">1.72%</td><td>輝達</td><td class="num">4.78%</td><td>邁威爾(Marvell)</td><td class="num">4.00%</td></tr>
+    <tr><td>10</td><td>達梭系統（工業軟體）</td><td class="num">1.64%</td><td>博通</td><td class="num">4.68%</td><td>SK海力士</td><td class="num">3.90%</td></tr>
+    <tr style="background:#FAFAF7;font-weight:700;"><td colspan="2">前十大合計</td><td class="num">18.79%</td><td colspan="2"></td><td class="num">49.42%</td><td colspan="1"></td><td class="num">60.21%</td></tr>
+  </table>
+  <p class="chart-note">可看出00737以中小型AI軟體／垂直應用公司為主，00851、00762則以美股科技權值股為核心。</p>
+</section>
+
+<section id="conc">
+  <h2>持股集中度比較</h2>
+  <div class="chart-card">
+    <h3>前十大成分股合計權重</h3>
+    <p class="chart-note">數字愈高代表持股愈集中在少數個股，波動也更容易受單一巨頭牽動</p>
+    <div class="concbar">
+      <div class="concrow">
+        <div class="lbl">00737<br>國泰AI+Robo</div>
+        <div class="conctrack"><div class="concfill" style="width:31.2%;background:var(--c737);">18.79%</div></div>
+        <div class="concval">分散型</div>
+      </div>
+      <div class="concrow">
+        <div class="lbl">00851<br>台新全球AI</div>
+        <div class="conctrack"><div class="concfill" style="width:82.1%;background:var(--c851);">49.42%</div></div>
+        <div class="concval">集中型</div>
+      </div>
+      <div class="concrow">
+        <div class="lbl">00762<br>元大全球AI</div>
+        <div class="conctrack"><div class="concfill" style="width:100%;background:var(--c762);">60.21%</div></div>
+        <div class="concval">最集中</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="overlap">
+  <h2>三檔共同持股權重對照</h2>
+  <div class="chart-card">
+    <h3>九檔三檔ETF皆持有的個股，權重差異一次看</h3>
+    <p class="chart-note">同一家公司，在「等權重」與「市值加權」邏輯下的權重可以差到10倍以上</p>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--c737)"></i>00737 國泰AI+Robo</span>
+      <span><i class="swatch" style="background:var(--c851)"></i>00851 台新全球AI</span>
+      <span><i class="swatch" style="background:var(--c762)"></i>00762 元大全球AI</span>
+    </div>
+    <div class="bars3" id="overlapChart">
+      <!-- rows injected below -->
+    </div>
+  </div>
+  <div class="srcnote">資料來源：同上表格三檔ETF持股明細（玩股網，2026/08/20）；權重數值為推論性彙整比較，非各投信官方公告之直接引用。</div>
+</section>
+
+<section id="interp">
+  <h2>解讀與觀察重點</h2>
+  <div class="key">
+    <p><b>選擇00737</b>：適合想參與AI／機器人「全產業鏈」、不希望被單一巨頭綁架淨值走勢的投資人，但代價是純度較低（大廠權重被稀釋到不到1%），且規模與流動性相對三者中等。</p>
+    <p><b>選擇00851</b>：持股橫跨AI晶片供應鏈（SK海力士、美光、輝達）到消費科技（蘋果、亞馬遜），集中度居中，規模是三檔中最小（3.88億），流動性需留意。</p>
+    <p><b>選擇00762</b>：AI純度最高（成分股AI營收佔比須逾50%），但前十大逼近六成，走勢幾乎完全跟隨微軟、輝達、Meta、Alphabet這幾檔美股權值股，規模是三檔中最大（54.17億）。</p>
+  </div>
+  <p class="lead">三檔並非互斥，若想同時保有「分散」與「純度」，可考慮小比例分別配置，而非單押一檔。實際申購前仍建議查閱各投信最新公開說明書與月報。</p>
+  <div class="disclaimer">本頁為成分股結構整理與方法論示範，不構成投資建議；ETF成分股會隨指數審核（如00737／00851／00762多為季度或半年度換股）而變動，請以各投信最新公告為準。</div>
+</section>
+
+<footer>
+  <div class="version">本文件版次：v1.0（2026-08-23 首次發布）</div>
+  <p>資料每次 <code>git push</code> 後反映最新版本。© Jackie's Stock Analysis｜<a href="https://github.com/mjib007/stock-analysis">回到 GitHub Repo</a>　｜　<a href="../LICENSE">CC BY-NC 4.0</a>（姓名標示－非商業性）</p>
+</footer>
+
+</div>
+
+<script>
+const overlapData = [
+  {name:"微軟 MSFT", v737:0.76, v851:4.82, v762:9.81},
+  {name:"輝達 NVDA", v737:0.73, v851:4.78, v762:8.43},
+  {name:"Meta META", v737:1.20, v851:4.54, v762:7.64},
+  {name:"Alphabet GOOGL", v737:0.63, v851:4.95, v762:7.58},
+  {name:"Palantir PLTR", v737:1.54, v851:2.52, v762:5.94},
+  {name:"美光 MU", v737:0.71, v851:4.81, v762:4.38},
+  {name:"博通 AVGO", v737:0.58, v851:4.68, v762:4.23},
+  {name:"SK海力士", v737:0.56, v851:5.20, v762:3.90},
+  {name:"Elastic ESTC", v737:0.50, v851:0.02, v762:0.15},
+];
+const maxV = 10; // 軸上限 10%
+const container = document.getElementById('overlapChart');
+overlapData.forEach(d=>{
+  const row = document.createElement('div');
+  row.className = 'grow';
+  const pct = v => Math.max((v/maxV)*100, 1.2);
+  row.innerHTML = `
+    <div class="glbl">${d.name}</div>
+    <div class="gbars">
+      <div class="gbarrow"><div class="gbartrack"><div class="gbarfill" style="width:${pct(d.v737)}%;background:var(--c737);"></div></div><div class="gbarval">${d.v737.toFixed(2)}%</div></div>
+      <div class="gbarrow"><div class="gbartrack"><div class="gbarfill" style="width:${pct(d.v851)}%;background:var(--c851);"></div></div><div class="gbarval">${d.v851.toFixed(2)}%</div></div>
+      <div class="gbarrow"><div class="gbartrack"><div class="gbarfill" style="width:${pct(d.v762)}%;background:var(--c762);"></div></div><div class="gbarval">${d.v762.toFixed(2)}%</div></div>
+    </div>`;
+  container.appendChild(row);
+});
+</script>
+
+</body>
+</html>

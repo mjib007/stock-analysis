@@ -134,11 +134,11 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   <h1 class="title"><span class="code">6532</span>瑞耘科技</h1>
   <p class="sub">六步驟分析流程。第一步為<b>盲測</b>——在讀完現金流量表數字之前，不查股價、產業地位與任何新聞背景，避免公司故事影響對財務數字的解讀。使用者提供的截圖雖含年度股價、漲跌幅與稅後 EPS 欄位，<b>本步驟一律不予採用</b>。</p>
   <div class="meta">
-    <span>報告版本 v4.0</span><span>生成時間 2026-08-31 06:07</span>
-    <span>目前進度 第 5 步／共 6 步</span><span>計分視窗 2014–2025（12 個完整年度）</span>
+    <span>報告版本 v5.0（六步驟完成）</span><span>生成時間 2026-08-31 06:07</span>
+    <span>目前進度 全部完成</span><span>計分視窗 2014–2025（12 個完整年度）</span>
   </div>
 </header>
-<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad" data-t="step3"><span class="k">03</span>法說會</button><button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad locked" data-t="step6"><span class="k">06</span>投資決策</button></nav>
+<nav class="stepnav" aria-label="步驟導覽"><button class="pad active" data-t="step1"><span class="k">01</span>現金流六大規則</button><button class="pad" data-t="step2"><span class="k">02</span>基本資訊</button><button class="pad" data-t="step3"><span class="k">03</span>法說會</button><button class="pad" data-t="step4"><span class="k">04</span>營收趨勢</button><button class="pad" data-t="step5"><span class="k">05</span>前瞻本益比</button><button class="pad" data-t="step6"><span class="k">06</span>投資決策</button></nav>
 
 <section id="step1">
 <div class="steptag">第 1 步／共 6 步</div>
@@ -860,7 +860,80 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 </div>
 <div class="snap"><b>來源：</b>2026 H1 與前 7 月營收、EPS、毛利率、營益率等基礎數字，出自公司重大訊息公告原文 <a href="https://tw.stock.yahoo.com/quote/6532.TWO/announcement">tw.stock.yahoo.com/quote/6532.TWO/announcement</a>。歷年收盤價與稅後 EPS 出自<b>使用者提供之 Goodinfo 截圖</b>。更換會計師之公告標題出自 Goodinfo 個股頁公告訊息欄（<b>僅見標題，未取得全文</b>）。<b>本節所有 EPS 情境、前瞻本益比、目標價與歷史本益比數值，均為 Claude 推算，非任何機構預估或頁面直接刊載之數字。</b></div>
 </section>
-<section id="step6"><div class="steptag">第 6 步／共 6 步</div><h2>投資決策推理</h2><div class="pending">待執行——僅在使用者主動要求時進行。</div></section>
+<section id="step6">
+<div class="steptag">第 6 步／共 6 步</div>
+<h2>投資決策推理</h2>
+
+<div class="key warn">
+  <div class="kt">必須先聲明</div>
+  <p><b>以下是我依前五步分析做出的推理與觀點，不是專業投資建議。我不是理財顧問，也不具備任何投資顧問資格。</b>本節所有判斷都建立在第 5 步那組「沒有任何外部預估可交叉驗證」的自建模型上，錯的機率不低。實際決策請自行判斷並承擔風險。</p>
+</div>
+
+<h3><span class="rn">1</span>核心矛盾：三句話</h3>
+<div class="key">
+  <div class="kt">整份分析收斂到這裡</div>
+  <p><b>① 這是一家體質乾淨的公司。</b>12 年營業現金流零負值、只借過一次錢且用途明確、負債比 25.2%、連續 11 年配息。第 1 步六大規則 67.8 分（知情調整後 69.2 分），沒有任何一個致命警訊。</p>
+  <p><b>② 但 2025 年的「歷史新高」是假的。</b>EPS 7.31 元裡有 5.64 元來自賣掉湖口舊廠。同一季本業稅前只剩約 0.26 億——<b>創新高的季度也是本業最差的季度</b>。</p>
+  <p><b>③ 而 2026 年真實的好消息，股價已經反映完了。</b>營收 4 月轉正、7 月創 19 個月新高、毛利率升到 39.38%，這些都是真的；但股價從年線 67.4 元漲到 95.3 元，中性情境前瞻本益比 20.4 倍已逼近八年上緣 21.5 倍。</p>
+</div>
+
+<h3><span class="rn">2</span>一個第 5 步沒展開、但我認為最關鍵的觀察</h3>
+<p>第 1 步規則五的老問題，<b>在 2026 年上半年又出現了一次</b>：</p>
+<div class="tw"><table class="grid"><thead><tr><th class="rh">期間</th><th>A 營業活動現金流</th><th>D 稅前淨利</th><th>A／D</th></tr></thead><tbody>
+<tr><th class="rh">2024 全年</th><td class="n">1.79</td><td class="n">1.86</td><td class="n">96.2%</td></tr>
+<tr><th class="rh">2025 全年</th><td class="n">1.69</td><td class="n">3.43</td><td class="n negv">49.3%（含一次性）</td></tr>
+<tr class="warnrow"><th class="rh">2026 H1</th><td class="n">0.69</td><td class="n">1.00</td><td class="n negv">69.0%</td></tr>
+</tbody></table></div>
+<p><b>2026 上半年沒有任何一次性項目，A／D 卻只有 69%。</b>年化後營業現金流約 1.38 億，<span class="negv-t">低於 2025 年的 1.69 億與 2024 年的 1.79 億</span>——在營收轉正、毛利率提升的同時，本業收現能力反而退步。</p>
+<p>最可能的解釋是<b>成長期的營運資金佔用</b>（接單增加 → 應收帳款與存貨同步墊高），這在拐點初期是正常且良性的。但它也可能是收款條件轉差。<b>這兩種可能性目前無法從公開數字區分，而這正是我認為現階段最需要盯的地方——不是營收，是現金。</b>第 1 步的結論在這裡再次發揮作用：這家公司長年的弱項就是「帳面比口袋漂亮」，成長期只會放大這個特性。</p>
+
+<h3><span class="rn">3</span>情境 A：若尚未持有，我會不會進場？</h3>
+<div class="key warn">
+  <div class="kt">我的推理：現價不會進，但會列入觀察名單</div>
+  <p><b>不進場的理由不是公司不好，是價格不對。</b>20.4 倍前瞻本益比意味著要賭「營收動能延續 ＋ 市場給史上最高倍數」兩件事同時成立。若只實現第一件、倍數回到 2024 年的 17.3 倍，對應價格 80.6 元，較現價低 15%；若動能放緩到保守情境（EPS 3.82）＋ 歷史平均 15 倍，對應 57 元。<b>下檔空間明顯大於上檔。</b></p>
+  <p>再加上今天剛漲 6.84%、單日成交 1,402 張是近期放大量，短線情緒成分不低。追在情緒高點上，是我認為最不划算的進場方式。</p>
+</div>
+<p><b>會讓我改變想法、願意進場的具體條件（需同時滿足前兩項）：</b></p>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">條件</th><th style="text-align:left">具體門檻</th><th style="text-align:left">可驗證時點</th></tr></thead><tbody>
+<tr><th class="rh">① 現金追上獲利</th><td class="l">Q3 累計財報的<b>營業活動現金流 ÷ 稅前淨利回到 90% 以上</b>（即現金流跟上獲利，證明營運資金佔用是暫時的）</td><td class="l">2026 年 11 月初季報公告後<br>（Q1–Q3 現金流量表）</td></tr>
+<tr><th class="rh">② 價格回到合理區</th><td class="l">股價回落至 <b>80 元以下</b>（對應中性 EPS 4.66 的 17.3 倍，即 2024 年估值水準）</td><td class="l">隨時</td></tr>
+<tr><th class="rh">③ 加分項</th><td class="l">8、9 月營收月均<b>維持 8,000 萬以上</b>（7 月為 8,798 萬），證明 7 月不是單月拉貨</td><td class="l">2026/09/05、10/05 營收公告</td></tr>
+</tbody></table></div>
+<p class="cap">條件 ① 與 ③ 都是<b>尚未發生、時點明確</b>的事件；條件 ② 是價格條件。若條件 ① 落空（現金流持續落後獲利），即使股價跌到 80 元以下我也不會進——因為那代表第 1 步規則五的弱項正在惡化，而不只是估值過高。</p>
+
+<h3><span class="rn">4</span>情境 B：若已經持有，續抱還是賣出？</h3>
+<div class="key calm">
+  <div class="kt">我的推理：續抱，但設定明確的減碼條件</div>
+  <p><b>不建議現在全數賣出</b>，理由是基本面的改善方向是真實的：營收拐點乾淨（三個月全負轉四個月全正）、毛利率提升 3.71 個百分點、營益率提升 1.28 個百分點、財務結構穩健、產業定位（半導體前段製程零組件、ALD 高附加價值產品線）踩在對的賽道上。這些不是估值可以一次性抹掉的東西。</p>
+  <p><b>但也不建議在此價位加碼</b>，理由同情境 A：風險報酬不對稱。</p>
+</div>
+<p><b>會觸發我減碼或出場的具體訊號（任一項成立即應重新評估）：</b></p>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">訊號</th><th style="text-align:left">具體門檻</th><th style="text-align:left">可驗證時點</th></tr></thead><tbody>
+<tr class="warnrow"><th class="rh">① 營收拐點破功</th><td class="l">連續<b>兩個月</b>營收年增率轉負，或月營收跌回 6,000 萬以下</td><td class="l">每月 5 日前後營收公告</td></tr>
+<tr class="warnrow"><th class="rh">② 毛利率回吐</th><td class="l">Q3 累計毛利率<b>跌破 37%</b>（低於 2026 H1 的 39.38% 逾 2 個百分點，代表產品組合升級的效果沒守住）</td><td class="l">2026 年 11 月初季報</td></tr>
+<tr class="warnrow"><th class="rh">③ 現金流持續落後</th><td class="l">2026 全年 A ÷ D <b>仍低於 70%</b>，且應收帳款、存貨同步續增</td><td class="l">2027 年 3 月年報</td></tr>
+<tr class="warnrow"><th class="rh">④ 又出現一次性利益</th><td class="l">財報再度出現<b>顯著業外處分利益</b>撐起 EPS（公司已無明顯閒置廠房，若再發生需追問資產來源）</td><td class="l">每季財報</td></tr>
+<tr class="warnrow"><th class="rh">⑤ 估值失速</th><td class="l">股價漲至 <b>117 元以上</b>（對應中性 EPS 的 25 倍，超出八年最高倍數甚多）而基本面未同步上修</td><td class="l">隨時</td></tr>
+</tbody></table></div>
+
+<h3><span class="rn">5</span>三件應該去查、但不是「等待發生」的事</h3>
+<p>以下是<b>已經發生、只是我沒能取得完整資料</b>的項目，不列為未來訊號，但建議在做決定前自行釐清：</p>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">項目</th><th style="text-align:left">為什麼重要</th><th style="text-align:left">去哪查</th></tr></thead><tbody>
+<tr><th class="rh">今天（2026/08/31）法說會內容</th><td class="l">14:30 已召開，但簡報與紀錄在本報告完成時尚未公布。若含 2027 年營收或資本支出指引，會直接影響第 5 步的模型假設</td><td class="l"><a href="https://mops.twse.com.tw/mops/web/t100sb02_1">公開資訊觀測站法人說明會一覽表</a></td></tr>
+<tr><th class="rh">更換會計師事務所的原因</th><td class="l">2026/03/04 董事會決議自 2026 Q1 起更換。多數屬例行輪調，但因與「一次性處分利益認列年度」相鄰，值得確認原因與前後任意見有無差異。<b>我只看到公告標題、未取得全文，不做任何推測</b></td><td class="l">公開資訊觀測站重大訊息</td></tr>
+<tr><th class="rh">2020 年 2.47 億公司債是否為可轉債</th><td class="l">第 1 步以來未解。若為 CB 且尚未轉換完畢，存在現金流量表上看不見的股本稀釋風險，會直接稀釋上述所有 EPS 推估。目前只有個人部落格的說法，<b>不足以作為結論</b></td><td class="l">公開資訊觀測站「公司債」與「股本形成」專區</td></tr>
+</tbody></table></div>
+
+<h3><span class="rn">6</span>我可能錯在哪</h3>
+<div class="key">
+  <div class="kt">反方觀點</div>
+  <p><b>① 我的估值錨可能太保守。</b>我用 2017–2024 年的本益比區間當基準，但那八年這家公司的營收是停滯的（2019 年 5.2 億到 2024 年 7.2 億）。如果轉單效應真的把它推上一個新的成長軌道，市場給成長股 25–30 倍並不離譜，我的「20.4 倍已在上緣」就會顯得過度謹慎。</p>
+  <p><b>② 我可能低估了 H2。</b>7 月營收 8,798 萬年增 49%，若這是新產品量產放量的起點而非高點，全年很可能超過我的樂觀情境 9.03 億。半導體設備零組件的訂單能見度通常有 1–2 季，公司自己顯然看得比我清楚。</p>
+  <p><b>③ 營運資金佔用的解讀可能反了。</b>我把 2026 H1 的 A／D 69% 當警訊，但成長期的應收與存貨墊高，恰恰是接單暢旺的證據。若 Q3 現金流回補，這個「警訊」會回頭變成利多的佐證。</p>
+  <p>換句話說，<b>如果我錯了，最可能的錯法是「太早看空一檔正在轉機的股票」</b>。這也是為什麼情境 B 的結論是續抱而非賣出——我對這家公司的體質有信心，只是對現在這個價格沒有。</p>
+</div>
+<div class="snap"><b>來源與資料性質：</b>本節不引入任何新的外部資料，全部建立在第 1–5 步已列示的來源之上。A／D 比率使用<b>使用者提供之 Goodinfo 截圖</b>；營收、毛利率、EPS、財務結構使用<b>公司重大訊息公告原文</b> <a href="https://tw.stock.yahoo.com/quote/6532.TWO/announcement">tw.stock.yahoo.com/quote/6532.TWO/announcement</a>；估值倍數與目標價為第 5 步之 Claude 推算。<b>本節所有進出場條件、門檻數值與判斷，均為 Claude 的個人推理，非投資建議。</b></div>
+</section>
 
 <footer>
 6532 瑞耘科技 · 個股初步分析報告 v1.0 · 生成時間 2026-08-31 06:07<br>

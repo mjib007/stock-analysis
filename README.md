@@ -31,7 +31,6 @@
 | 檔案 | 說明 | 適用平台 |
 |------|------|----------|
 | `SKILL.md` | Claude Skills 工具專屬版（含 create_file／git push 等自動化流程） | Claude.ai Skills 功能 |
-| `台股個股分析框架_通用版.md` | 拿掉Claude工具專屬指令的通用版 | ChatGPT、Gemini 等所有 AI 對話介面 |
 | `reports/*_analysis.html` | 歷次分析報告範例（每檔股票一份，六步驟累加於同一檔案） | 瀏覽器直接開啟或 GitHub Pages |
 | `index.html` | 所有報告的總覽首頁（可搜尋／篩選／依日期排序） | GitHub Pages 進站首頁 |
 | `README.md` | 本說明文件 | — |
@@ -61,7 +60,7 @@
 
 ## 🚀 使用方法
 
-### 方法一：Claude Skills 版（推薦 Claude.ai 用戶使用）
+### Claude Skills 版
 
 **步驟：**
 1. 進入 [Claude.ai](https://claude.ai)，點選帳號，找到「設定（Settings）」
@@ -95,19 +94,6 @@
 - Token 直接貼在對話裡屬於明碼傳輸，建議設定過期時間，且用完後可以到 GitHub 設定裡撤銷重發
 - 若不想每次都要提供 token，可以刪除 `SKILL.md` 中「Git 版控與發布規則」整個章節，改成手動下載報告自行上傳
   
----
-
-### 方法二：通用 Prompt 版（跨平台通用）
-
-適合使用 ChatGPT、Gemini 等其他 AI 對話工具的使用者。
-
-**步驟：**
-1. 開啟 `台股個股分析框架_通用版.md`，複製全部Skills內容
-2. 直接貼入任何個別AI 對話框，或專案的使用說明、指令，或其他可貼上Skills內容的地方
-3. 執行後，Skills會引導你開始分析
-
-> ⚠️ 此版本不含檔案自動生成與 Git 版控功能，每次**新對話**需重新貼入。
-
 ---
 
 ## 🧪 使用示範

@@ -9,16 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#131A22; --ink-2:#3A4756; --ink-3:#6E7B8A;
-  --paper:#F5F5F2; --card:#FFFFFF; --rule:#DEE1DC;
-  --pos:#2A6F5B; --neg:#B0453B; --peak:#C08A2E; --trough:#D9A6A0;
-  --band:#EFE6D5; --accent:#2E5266;
+  --ink:#0F172A; --ink-2:#475569; --ink-3:#64748B;
+  --paper:#F8FAFC; --card:#FFFFFF; --rule:#E2E8F0;
+  --pos:#10B981; --neg:#F43F5E; --peak:#F59E0B; --trough:#FDA4AF;
+  --band:#FEF3C7; --accent:#2563EB; --accent2:#8B5CF6;
 }
 [data-theme="dark"]{
-  --ink:#E8EAED; --ink-2:#B8C0C8; --ink-3:#8A93A0;
-  --paper:#14181D; --card:#1C2128; --rule:#2D333B;
-  --pos:#4FAE8F; --neg:#E0776B; --peak:#D9A94E; --trough:#8C5A55;
-  --band:#3A3222; --accent:#6FA3C7;
+  --ink:#F1F5F9; --ink-2:#B6C2D1; --ink-3:#8697AC;
+  --paper:#0B0F19; --card:#131B2E; --rule:#1E293B;
+  --pos:#34D399; --neg:#FB7185; --peak:#FBBF24; --trough:#B84B5B;
+  --band:#3A2E12; --accent:#3B82F6; --accent2:#A78BFA;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -90,7 +90,7 @@ h3 .rn{font-family:"IBM Plex Mono",monospace;color:var(--accent);font-size:15px;
 h4{font-size:15px;margin:22px 0 6px;color:var(--ink-2)}
 p{margin:10px 0}
 .lead{color:var(--ink-2)}
-.key{background:#FFFDF5;border-left:5px solid var(--peak);border-radius:0 6px 6px 0;
+.key{background:#FEF9EC;border-left:5px solid var(--peak);border-radius:0 6px 6px 0;
   padding:15px 20px;margin:20px 0 26px}
 .key.warn{background:#FDF3F1;border-left-color:var(--neg)}
 .key.calm{background:#F0F4F5;border-left-color:var(--accent)}
@@ -110,8 +110,8 @@ b{font-weight:700}
 table.grid{border-collapse:collapse;width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px}
 table.grid.wide{min-width:900px}
 table.grid th,table.grid td{padding:7px 9px;border-bottom:1px solid var(--rule);text-align:right;white-space:nowrap}
-table.grid thead th{background:#ECEFEC;font-weight:600;color:var(--ink-2);font-size:12.5px}
-table.grid th.rh{text-align:left;background:#ECEFEC;position:sticky;left:0;z-index:2;
+table.grid thead th{background:#EEF2F8;font-weight:600;color:var(--ink-2);font-size:12.5px}
+table.grid th.rh{text-align:left;background:#EEF2F8;position:sticky;left:0;z-index:2;
   font-family:"Noto Sans TC",sans-serif;font-weight:500;font-size:13px}
 table.grid tbody tr:last-child td,table.grid tbody tr:last-child th{border-bottom:none}
 td.n{font-variant-numeric:tabular-nums}
@@ -121,27 +121,27 @@ td.muted{color:var(--ink-3)}
 td.pass{color:var(--pos);text-align:left;font-family:"Noto Sans TC",sans-serif}
 td.fail{color:var(--neg);font-weight:600;text-align:left;font-family:"Noto Sans TC",sans-serif}
 td.l{text-align:left;white-space:normal;font-family:"Noto Sans TC",sans-serif;font-size:13.5px;line-height:1.6}
-tr.qrow{background:#F6F4EE}
-tr.hlrow td,tr.hlrow th{background:#E9EDEC;font-weight:600}
-tr.hlrow th.rh{background:#E9EDEC}
-tr.warnrow td,tr.warnrow th{background:#FBEDEA}
-tr.warnrow th.rh{background:#FBEDEA}
+tr.qrow{background:#F5F7FC}
+tr.hlrow td,tr.hlrow th{background:#E8EFFC;font-weight:600}
+tr.hlrow th.rh{background:#E8EFFC}
+tr.warnrow td,tr.warnrow th{background:#FDECEF}
+tr.warnrow th.rh{background:#FDECEF}
 .chartbox{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 10px 4px;margin:14px 0 8px}
 svg.bars{width:100%;height:auto;display:block}
-.axis{stroke:#B9C2BB;stroke-width:1}
-.b-normal{fill:#8296A5}
+.axis{stroke:#94A3B8;stroke-width:1}
+.b-normal{fill:#93A5C9}
 .b-peak{fill:var(--peak)}
 .b-trough{fill:var(--trough)}
-.b-q{fill:#C8CFD4}
-.b-s1{fill:#5C7F94}
-.b-s2{fill:#C08A5E}
+.b-q{fill:#C7D2E8}
+.b-s1{fill:#6D8FD9}
+.b-s2{fill:#F0995C}
 .hiband{fill:var(--band)}
 text.bval{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--ink-2);text-anchor:middle}
 text.bval.sm{font-size:10px}
 text.blab{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--ink-3);text-anchor:middle}
 .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2);padding:2px 6px 10px}
 .legend i.sw{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px}
-.sw.s1{background:#5C7F94} .sw.s2{background:#C08A5E} .sw.q{background:#C8CFD4}
+.sw.s1{background:#6D8FD9} .sw.s2{background:#F0995C} .sw.q{background:#C7D2E8}
 .sw.pk{background:var(--peak)} .sw.tr{background:var(--trough)}
 .cap{font-size:13px;color:var(--ink-2);margin:6px 0 0;padding-left:2px}
 .scwrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px;margin:20px 0}
@@ -158,11 +158,11 @@ text.blab{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--ink-3)
 .total .tl{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.2em;color:#9FB0BE;text-transform:uppercase}
 .total .tn{color:#D6DEDA;max-width:56ch;font-size:14px}
 ul{padding-left:20px;margin:10px 0} li{margin:5px 0}
-.snap{background:#ECEFEC;border-radius:6px;padding:13px 17px;font-size:13px;color:var(--ink-2);margin:16px 0 0}
+.snap{background:#EEF2F8;border-radius:6px;padding:13px 17px;font-size:13px;color:var(--ink-2);margin:16px 0 0}
 .snap b{color:var(--ink)}
 .snap a{color:var(--accent)}
 .pending{border:1px dashed var(--rule);border-radius:6px;padding:24px;color:var(--ink-3);
-  text-align:center;font-size:14px;background:#FBFCFB}
+  text-align:center;font-size:14px;background:#F8FAFC}
 footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
   font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3)}
 @media(max-width:640px){body{font-size:15px} h2{font-size:22px} .total .tv{font-size:42px}}
@@ -192,7 +192,7 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 </div>
 
 <h3><span class="rn">§</span>原始數據（單位：億元）</h3>
-<div class="tw"><table class="grid wide"><thead><tr><th class="rh">項目</th><th>2014</th><th>2015</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th style="background:#E4E2D8">26H1*</th></tr></thead><tbody><tr><th class="rh">A 營業活動</th><td class="n posv">0.63</td><td class="n posv">1.07</td><td class="n posv">0.39</td><td class="n posv">0.71</td><td class="n posv">1.05</td><td class="n posv">0.86</td><td class="n posv">1.32</td><td class="n posv">1.17</td><td class="n posv">1.68</td><td class="n posv">1.72</td><td class="n posv">1.79</td><td class="n posv">1.69</td><td class="n posv" style="background:#F6F4EE">0.69</td></tr><tr><th class="rh">B 投資活動</th><td class="n negv">-0.09</td><td class="n negv">-0.03</td><td class="n negv">-0.28</td><td class="n negv">-0.19</td><td class="n negv">-0.15</td><td class="n negv">-0.07</td><td class="n negv">-2.46</td><td class="n negv">-1.57</td><td class="n negv">-2.48</td><td class="n negv">-0.74</td><td class="n negv">-0.14</td><td class="n negv">-1.86</td><td class="n posv" style="background:#F6F4EE">2.66</td></tr><tr><th class="rh">C 融資活動</th><td class="n negv">-0.11</td><td class="n negv">-0.35</td><td class="n posv">0.13</td><td class="n negv">-0.19</td><td class="n negv">-0.35</td><td class="n negv">-0.74</td><td class="n posv">1.89</td><td class="n negv">-0.73</td><td class="n negv">-0.46</td><td class="n negv">-1.22</td><td class="n negv">-0.91</td><td class="n negv">-0.46</td><td class="n negv" style="background:#F6F4EE">-0.51</td></tr><tr><th class="rh">D 稅前淨利</th><td class="n posv">0.50</td><td class="n posv">0.60</td><td class="n posv">0.42</td><td class="n posv">0.70</td><td class="n posv">1.37</td><td class="n posv">1.06</td><td class="n posv">1.30</td><td class="n posv">1.20</td><td class="n posv">2.24</td><td class="n posv">1.63</td><td class="n posv">1.86</td><td class="n posv">3.43</td><td class="n posv" style="background:#F6F4EE">1.00</td></tr><tr><th class="rh">E 期末現金餘額</th><td class="n ">1.58</td><td class="n ">2.24</td><td class="n ">2.47</td><td class="n ">2.81</td><td class="n ">3.36</td><td class="n ">3.41</td><td class="n ">4.15</td><td class="n ">3.03</td><td class="n ">1.76</td><td class="n ">1.52</td><td class="n ">2.26</td><td class="n ">1.63</td><td class="n " style="background:#F6F4EE">4.46</td></tr></tbody></table></div>
+<div class="tw"><table class="grid wide"><thead><tr><th class="rh">項目</th><th>2014</th><th>2015</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th style="background:#DCE6FA">26H1*</th></tr></thead><tbody><tr><th class="rh">A 營業活動</th><td class="n posv">0.63</td><td class="n posv">1.07</td><td class="n posv">0.39</td><td class="n posv">0.71</td><td class="n posv">1.05</td><td class="n posv">0.86</td><td class="n posv">1.32</td><td class="n posv">1.17</td><td class="n posv">1.68</td><td class="n posv">1.72</td><td class="n posv">1.79</td><td class="n posv">1.69</td><td class="n posv" style="background:#EDF1FA">0.69</td></tr><tr><th class="rh">B 投資活動</th><td class="n negv">-0.09</td><td class="n negv">-0.03</td><td class="n negv">-0.28</td><td class="n negv">-0.19</td><td class="n negv">-0.15</td><td class="n negv">-0.07</td><td class="n negv">-2.46</td><td class="n negv">-1.57</td><td class="n negv">-2.48</td><td class="n negv">-0.74</td><td class="n negv">-0.14</td><td class="n negv">-1.86</td><td class="n posv" style="background:#EDF1FA">2.66</td></tr><tr><th class="rh">C 融資活動</th><td class="n negv">-0.11</td><td class="n negv">-0.35</td><td class="n posv">0.13</td><td class="n negv">-0.19</td><td class="n negv">-0.35</td><td class="n negv">-0.74</td><td class="n posv">1.89</td><td class="n negv">-0.73</td><td class="n negv">-0.46</td><td class="n negv">-1.22</td><td class="n negv">-0.91</td><td class="n negv">-0.46</td><td class="n negv" style="background:#EDF1FA">-0.51</td></tr><tr><th class="rh">D 稅前淨利</th><td class="n posv">0.50</td><td class="n posv">0.60</td><td class="n posv">0.42</td><td class="n posv">0.70</td><td class="n posv">1.37</td><td class="n posv">1.06</td><td class="n posv">1.30</td><td class="n posv">1.20</td><td class="n posv">2.24</td><td class="n posv">1.63</td><td class="n posv">1.86</td><td class="n posv">3.43</td><td class="n posv" style="background:#EDF1FA">1.00</td></tr><tr><th class="rh">E 期末現金餘額</th><td class="n ">1.58</td><td class="n ">2.24</td><td class="n ">2.47</td><td class="n ">2.81</td><td class="n ">3.36</td><td class="n ">3.41</td><td class="n ">4.15</td><td class="n ">3.03</td><td class="n ">1.76</td><td class="n ">1.52</td><td class="n ">2.26</td><td class="n ">1.63</td><td class="n " style="background:#EDF1FA">4.46</td></tr></tbody></table></div>
 <p class="cap">＊26H1 為 2026 年上半年累計數（期初餘額 1.63 億與 2025 年期末餘額相符，可確認為年初起算累計）。<b>此欄僅供參考，不列入六大規則計分</b>，計分一律以 2014–2025 共 12 個完整年度為基準。</p>
 <div class="snap"><b>資料來源：</b>本節所有數字皆為<b>使用者提供的 Goodinfo 截圖</b>（現金流量表總表、投資活動細項、融資活動細項共 3 張），非本次網路搜尋所得。Goodinfo 有防爬蟲機制，Claude 無法自行擷取該頁面內容。原始頁面：<a href="https://goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=6532">goodinfo.tw/tw/StockCashFlow.asp?STOCK_ID=6532</a></div>
 
@@ -375,7 +375,7 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 <text class="bval sm" x="978.4" y="167.7">-0.46</text>
 <text class="blab" x="964.6" y="274.0">25</text>
 <text class="blab" x="50" y="22" style="text-anchor:start">單位：億元</text>
-</svg><div class="legend"><span><i class="sw s1"></i>B 投資活動現金流</span><span><i class="sw s2"></i>C 融資活動現金流</span><span><i class="sw" style="background:#EFE6D5"></i>「B 大幅負值 ＋ C 為正」候選年度</span></div></div>
+</svg><div class="legend"><span><i class="sw s1"></i>B 投資活動現金流</span><span><i class="sw s2"></i>C 融資活動現金流</span><span><i class="sw" style="background:#FEF3C7"></i>「B 大幅負值 ＋ C 為正」候選年度</span></div></div>
 <div class="tw"><table class="grid wide"><thead><tr><th class="rh">融資活動細項</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead><tbody><tr><th class="rh">短期借款增加(減少)</th><td class="n muted">0.00</td><td class="n muted">0.00</td><td class="n muted">0.00</td><td class="n muted">0.00</td><td class="n muted">0.00</td><td class="n muted">0.00</td><td class="n posv">0.20</td><td class="n negv">-0.20</td><td class="n muted">0.00</td><td class="n posv">0.50</td></tr><tr><th class="rh">公司債之發行(償還)</th><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">0.00</td><td class="n posv">2.47</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td></tr><tr><th class="rh">長期借款增加(減少)</th><td class="n negv">-0.13</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">0.00</td><td class="n muted">0.00</td><td class="n muted">0.00</td><td class="n muted">—</td><td class="n muted">—</td></tr><tr><th class="rh">現金增資(減資)</th><td class="n posv">0.65</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td></tr><tr><th class="rh">員工購買庫藏股</th><td class="n posv">0.042</td><td class="n posv">0.057</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td></tr><tr><th class="rh">庫藏股之(買回)賣出</th><td class="n negv">-0.032</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td></tr><tr><th class="rh">發放現金股利</th><td class="n negv">-0.40</td><td class="n negv">-0.25</td><td class="n negv">-0.35</td><td class="n negv">-0.73</td><td class="n negv">-0.57</td><td class="n negv">-0.72</td><td class="n negv">-0.65</td><td class="n negv">-1.01</td><td class="n negv">-0.90</td><td class="n negv">-0.97</td></tr><tr><th class="rh">租賃本金增加(減少)</th><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">0.00</td><td class="n negv">-0.013</td><td class="n negv">-0.012</td><td class="n negv">-0.010</td><td class="n negv">-0.011</td><td class="n negv">-0.011</td><td class="n negv">-0.011</td><td class="n negv">-0.011</td></tr><tr><th class="rh">存入保證金增加(減少)</th><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">—</td><td class="n muted">0.00</td><td class="n posv">0.022</td></tr><tr class="hlrow"><th class="rh">C 融資活動淨額</th><td class="n posv">0.13</td><td class="n negv">-0.19</td><td class="n negv">-0.35</td><td class="n negv">-0.74</td><td class="n posv">1.89</td><td class="n negv">-0.73</td><td class="n negv">-0.46</td><td class="n negv">-1.22</td><td class="n negv">-0.91</td><td class="n negv">-0.46</td></tr></tbody></table></div>
 <p class="cap">融資細項僅有 2014–2025 的截圖資料，上表列 2016–2025；2014、2015 年 C 分別為 −0.11、−0.35 億，主要為長期借款償還與現金股利。</p>
 <p><b>最高警戒訊號檢查（A 為負 ＋ C 為正或小幅負值）：<span class="posv-t">12 個年度中一次都沒有出現</span></b>。A 每一年都是正的，這條最嚴重的警訊完全不成立。</p>
@@ -852,7 +852,7 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;
 <text class="blab" x="951.4" y="272.0">2025*</text>
 <text class="blab" x="44" y="22" style="text-anchor:start">單位：年度收盤本益比（倍）</text>
 </svg></div>
-<div class="legend"><span><i class="sw pk"></i>期間高點</span><span><i class="sw tr"></i>期間低點</span><span><i class="sw" style="background:#C8CFD4;border:1.4px dashed #8296A5"></i>2025 核心口徑（虛線框，僅供參考）</span></div>
+<div class="legend"><span><i class="sw pk"></i>期間高點</span><span><i class="sw tr"></i>期間低點</span><span><i class="sw" style="background:#C7D2E8;border:1.4px dashed #93A5C9"></i>2025 核心口徑（虛線框，僅供參考）</span></div>
 <p><b>2017–2024 年的年度收盤本益比平均 15.0 倍，區間 7.9～21.5 倍。</b>這八年沒有一次收在 22 倍以上。2025 年若用帳面 EPS 7.31 算只有 7.8 倍，但那含一次性利益、不具參考性；改用核心 EPS 2.81 元計算約 20.2 倍（上圖虛線框即為此值，<b>僅供參考不列入平均</b>）。</p>
 <p class="cap">本圖各年度收盤價與稅後 EPS 均取自使用者提供之 Goodinfo 截圖（<b>直接觀察數據</b>），本益比為 Claude 相除<b>推算</b>，非 Goodinfo 頁面直接顯示的欄位。</p>
 
